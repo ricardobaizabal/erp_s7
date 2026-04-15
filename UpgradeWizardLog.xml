@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="_UpgradeWizard_Files\UpgradeWizardLog.xslt"?>
+<log>
+  <event>Get project references.</event>
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\dev\erp_s7\erp_s7.vbproj" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\actualizar_UUID.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\actualizar_UUID.aspx" />
+  <event action="Analyze" type="Success" name="actualizar_UUID.aspx" path="C:\dev\erp_s7\actualizar_UUID.aspx" />
+  <event action="Analyze" type="Success" name="Resource.resx" path="C:\dev\erp_s7\App_GlobalResources\Resource.resx" />
+  <event action="Analyze" type="Success" name="Binary References" path="C:\dev\erp_s7\bin\" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\dev\erp_s7\bin\erp_s7.dll.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\dev\erp_s7\bin\erp_s7.dll.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\dev\erp_s7\bin\erp_s7.dll.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\dev\erp_s7\bin\erp_s7.dll.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\dev\erp_s7\bin\erp_s7.dll.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\dev\erp_s7\bin\erp_s7.dll.config" />
+  <event action="Analyze" type="Success" name="erp_s7.dll.config" path="C:\dev\erp_s7\bin\erp_s7.dll.config" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\Default.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\Default.aspx" />
+  <event action="Analyze" type="Success" name="Default.aspx" path="C:\dev\erp_s7\Default.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\Existencias.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\Existencias.aspx" />
+  <event action="Analyze" type="Success" name="Existencias.aspx" path="C:\dev\erp_s7\Existencias.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\ExistenciasFeetures.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\ExistenciasFeetures.aspx" />
+  <event action="Analyze" type="Success" name="ExistenciasFeetures.aspx" path="C:\dev\erp_s7\ExistenciasFeetures.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\ExistenciasGoodr.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\ExistenciasGoodr.aspx" />
+  <event action="Analyze" type="Success" name="ExistenciasGoodr.aspx" path="C:\dev\erp_s7\ExistenciasGoodr.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\MasterPage.master" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\MasterPage.master" />
+  <event action="Analyze" type="Success" name="MasterPage.master" path="C:\dev\erp_s7\MasterPage.master" />
+  <event action="Analyze" type="Success" name="Resources.resx" path="C:\dev\erp_s7\My Project\Resources.resx" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\dev\erp_s7\packages.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\dev\erp_s7\packages.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\dev\erp_s7\packages.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\dev\erp_s7\packages.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\dev\erp_s7\packages.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\dev\erp_s7\packages.config" />
+  <event action="Analyze" type="Success" name="packages.config" path="C:\dev\erp_s7\packages.config" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\administracion\Clientes.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\administracion\Clientes.aspx" />
+  <event action="Analyze" type="Success" name="Clientes.aspx" path="C:\dev\erp_s7\portalcfd\administracion\Clientes.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\administracion\Cotizaciones.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\administracion\Cotizaciones.aspx" />
+  <event action="Analyze" type="Success" name="Cotizaciones.aspx" path="C:\dev\erp_s7\portalcfd\administracion\Cotizaciones.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\administracion\cuentasporcobrar.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\administracion\cuentasporcobrar.aspx" />
+  <event action="Analyze" type="Success" name="cuentasporcobrar.aspx" path="C:\dev\erp_s7\portalcfd\administracion\cuentasporcobrar.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\agenda.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\agenda.aspx" />
+  <event action="Analyze" type="Success" name="agenda.aspx" path="C:\dev\erp_s7\portalcfd\agenda.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\almacen\abastecimiento.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\almacen\abastecimiento.aspx" />
+  <event action="Analyze" type="Success" name="abastecimiento.aspx" path="C:\dev\erp_s7\portalcfd\almacen\abastecimiento.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\almacen\agregarConsignacion.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\almacen\agregarConsignacion.aspx" />
+  <event action="Analyze" type="Success" name="agregarConsignacion.aspx" path="C:\dev\erp_s7\portalcfd\almacen\agregarConsignacion.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\almacen\agregarlote.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\almacen\agregarlote.aspx" />
+  <event action="Analyze" type="Success" name="agregarlote.aspx" path="C:\dev\erp_s7\portalcfd\almacen\agregarlote.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\almacen\ajustes.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\almacen\ajustes.aspx" />
+  <event action="Analyze" type="Success" name="ajustes.aspx" path="C:\dev\erp_s7\portalcfd\almacen\ajustes.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\almacen\almacenes.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\almacen\almacenes.aspx" />
+  <event action="Analyze" type="Success" name="almacenes.aspx" path="C:\dev\erp_s7\portalcfd\almacen\almacenes.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\almacen\caducidades.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\almacen\caducidades.aspx" />
+  <event action="Analyze" type="Success" name="caducidades.aspx" path="C:\dev\erp_s7\portalcfd\almacen\caducidades.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\almacen\colecciones.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\almacen\colecciones.aspx" />
+  <event action="Analyze" type="Success" name="colecciones.aspx" path="C:\dev\erp_s7\portalcfd\almacen\colecciones.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\almacen\consignaciones.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\almacen\consignaciones.aspx" />
+  <event action="Analyze" type="Success" name="consignaciones.aspx" path="C:\dev\erp_s7\portalcfd\almacen\consignaciones.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\almacen\edita_embarcado.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\almacen\edita_embarcado.aspx" />
+  <event action="Analyze" type="Success" name="edita_embarcado.aspx" path="C:\dev\erp_s7\portalcfd\almacen\edita_embarcado.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\almacen\editaconsignacion.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\almacen\editaconsignacion.aspx" />
+  <event action="Analyze" type="Success" name="editaconsignacion.aspx" path="C:\dev\erp_s7\portalcfd\almacen\editaconsignacion.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\almacen\editalote.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\almacen\editalote.aspx" />
+  <event action="Analyze" type="Success" name="editalote.aspx" path="C:\dev\erp_s7\portalcfd\almacen\editalote.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\almacen\embarcado.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\almacen\embarcado.aspx" />
+  <event action="Analyze" type="Success" name="embarcado.aspx" path="C:\dev\erp_s7\portalcfd\almacen\embarcado.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\almacen\entradas.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\almacen\entradas.aspx" />
+  <event action="Analyze" type="Success" name="entradas.aspx" path="C:\dev\erp_s7\portalcfd\almacen\entradas.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\almacen\inventario.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\almacen\inventario.aspx" />
+  <event action="Analyze" type="Success" name="inventario.aspx" path="C:\dev\erp_s7\portalcfd\almacen\inventario.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\almacen\kardex.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\almacen\kardex.aspx" />
+  <event action="Analyze" type="Success" name="kardex.aspx" path="C:\dev\erp_s7\portalcfd\almacen\kardex.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\almacen\Productos.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\almacen\Productos.aspx" />
+  <event action="Analyze" type="Success" name="Productos.aspx" path="C:\dev\erp_s7\portalcfd\almacen\Productos.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\almacen\transferencias.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\almacen\transferencias.aspx" />
+  <event action="Analyze" type="Success" name="transferencias.aspx" path="C:\dev\erp_s7\portalcfd\almacen\transferencias.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\Cancelados.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\Cancelados.aspx" />
+  <event action="Analyze" type="Success" name="Cancelados.aspx" path="C:\dev\erp_s7\portalcfd\Cancelados.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\CFD.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\CFD.aspx" />
+  <event action="Analyze" type="Success" name="CFD.aspx" path="C:\dev\erp_s7\portalcfd\CFD.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\CFD_Detalle.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\CFD_Detalle.aspx" />
+  <event action="Analyze" type="Success" name="CFD_Detalle.aspx" path="C:\dev\erp_s7\portalcfd\CFD_Detalle.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\ComplementoDePagos.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\ComplementoDePagos.aspx" />
+  <event action="Analyze" type="Success" name="ComplementoDePagos.aspx" path="C:\dev\erp_s7\portalcfd\ComplementoDePagos.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\ComplementoDePagos40.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\ComplementoDePagos40.aspx" />
+  <event action="Analyze" type="Success" name="ComplementoDePagos40.aspx" path="C:\dev\erp_s7\portalcfd\ComplementoDePagos40.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\ComplementosEmitidos.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\ComplementosEmitidos.aspx" />
+  <event action="Analyze" type="Success" name="ComplementosEmitidos.aspx" path="C:\dev\erp_s7\portalcfd\ComplementosEmitidos.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\configuracion\ajustes.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\configuracion\ajustes.aspx" />
+  <event action="Analyze" type="Success" name="ajustes.aspx" path="C:\dev\erp_s7\portalcfd\configuracion\ajustes.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\configuracion\Claves.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\configuracion\Claves.aspx" />
+  <event action="Analyze" type="Success" name="Claves.aspx" path="C:\dev\erp_s7\portalcfd\configuracion\Claves.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\configuracion\Datos.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\configuracion\Datos.aspx" />
+  <event action="Analyze" type="Success" name="Datos.aspx" path="C:\dev\erp_s7\portalcfd\configuracion\Datos.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\configuracion\Marcas.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\configuracion\Marcas.aspx" />
+  <event action="Analyze" type="Success" name="Marcas.aspx" path="C:\dev\erp_s7\portalcfd\configuracion\Marcas.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\configuracion\Unidad.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\configuracion\Unidad.aspx" />
+  <event action="Analyze" type="Success" name="Unidad.aspx" path="C:\dev\erp_s7\portalcfd\configuracion\Unidad.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\Configuracion.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\Configuracion.aspx" />
+  <event action="Analyze" type="Success" name="Configuracion.aspx" path="C:\dev\erp_s7\portalcfd\Configuracion.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\CuentasBeneficiario.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\CuentasBeneficiario.aspx" />
+  <event action="Analyze" type="Success" name="CuentasBeneficiario.aspx" path="C:\dev\erp_s7\portalcfd\CuentasBeneficiario.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\Deducciones.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\Deducciones.aspx" />
+  <event action="Analyze" type="Success" name="Deducciones.aspx" path="C:\dev\erp_s7\portalcfd\Deducciones.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\Departamentos.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\Departamentos.aspx" />
+  <event action="Analyze" type="Success" name="Departamentos.aspx" path="C:\dev\erp_s7\portalcfd\Departamentos.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\Empleados.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\Empleados.aspx" />
+  <event action="Analyze" type="Success" name="Empleados.aspx" path="C:\dev\erp_s7\portalcfd\Empleados.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\Facturar.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\Facturar.aspx" />
+  <event action="Analyze" type="Success" name="Facturar.aspx" path="C:\dev\erp_s7\portalcfd\Facturar.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\Facturar_Consignacion.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\Facturar_Consignacion.aspx" />
+  <event action="Analyze" type="Success" name="Facturar_Consignacion.aspx" path="C:\dev\erp_s7\portalcfd\Facturar_Consignacion.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\Facturar_Extended.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\Facturar_Extended.aspx" />
+  <event action="Analyze" type="Success" name="Facturar_Extended.aspx" path="C:\dev\erp_s7\portalcfd\Facturar_Extended.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\Facturar40.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\Facturar40.aspx" />
+  <event action="Analyze" type="Success" name="Facturar40.aspx" path="C:\dev\erp_s7\portalcfd\Facturar40.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\folios.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\folios.aspx" />
+  <event action="Analyze" type="Success" name="folios.aspx" path="C:\dev\erp_s7\portalcfd\folios.aspx" />
+  <event action="Analyze" type="Success" name="CotizacionPDF.resx" path="C:\dev\erp_s7\portalcfd\Formatos\CotizacionPDF.resx" />
+  <event action="Analyze" type="Success" name="formato_complemento33iu.resx" path="C:\dev\erp_s7\portalcfd\Formatos\formato_complemento33iu.resx" />
+  <event action="Analyze" type="Success" name="FormatoOrdenCompra.resx" path="C:\dev\erp_s7\portalcfd\Formatos\FormatoOrdenCompra.resx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\Home.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\Home.aspx" />
+  <event action="Analyze" type="Success" name="Home.aspx" path="C:\dev\erp_s7\portalcfd\Home.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\MasterPage_PortalCFD.master" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\MasterPage_PortalCFD.master" />
+  <event action="Analyze" type="Success" name="MasterPage_PortalCFD.master" path="C:\dev\erp_s7\portalcfd\MasterPage_PortalCFD.master" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\pedidos\editapedido.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\pedidos\editapedido.aspx" />
+  <event action="Analyze" type="Success" name="editapedido.aspx" path="C:\dev\erp_s7\portalcfd\pedidos\editapedido.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\pedidos\OrdenSalida.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\pedidos\OrdenSalida.aspx" />
+  <event action="Analyze" type="Success" name="OrdenSalida.aspx" path="C:\dev\erp_s7\portalcfd\pedidos\OrdenSalida.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\pedidos\pedidos.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\pedidos\pedidos.aspx" />
+  <event action="Analyze" type="Success" name="pedidos.aspx" path="C:\dev\erp_s7\portalcfd\pedidos\pedidos.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\pedidos\ReporteFoliosSalida.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\pedidos\ReporteFoliosSalida.aspx" />
+  <event action="Analyze" type="Success" name="ReporteFoliosSalida.aspx" path="C:\dev\erp_s7\portalcfd\pedidos\ReporteFoliosSalida.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\Percepciones.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\Percepciones.aspx" />
+  <event action="Analyze" type="Success" name="Percepciones.aspx" path="C:\dev\erp_s7\portalcfd\Percepciones.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\proveedores\agregarorden.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\proveedores\agregarorden.aspx" />
+  <event action="Analyze" type="Success" name="agregarorden.aspx" path="C:\dev\erp_s7\portalcfd\proveedores\agregarorden.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\proveedores\cargafactura.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\proveedores\cargafactura.aspx" />
+  <event action="Analyze" type="Success" name="cargafactura.aspx" path="C:\dev\erp_s7\portalcfd\proveedores\cargafactura.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\proveedores\cuentasporpagar.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\proveedores\cuentasporpagar.aspx" />
+  <event action="Analyze" type="Success" name="cuentasporpagar.aspx" path="C:\dev\erp_s7\portalcfd\proveedores\cuentasporpagar.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\proveedores\editarorden.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\proveedores\editarorden.aspx" />
+  <event action="Analyze" type="Success" name="editarorden.aspx" path="C:\dev\erp_s7\portalcfd\proveedores\editarorden.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\proveedores\ordenes_compra.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\proveedores\ordenes_compra.aspx" />
+  <event action="Analyze" type="Success" name="ordenes_compra.aspx" path="C:\dev\erp_s7\portalcfd\proveedores\ordenes_compra.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\proveedores\proveedores.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\proveedores\proveedores.aspx" />
+  <event action="Analyze" type="Success" name="proveedores.aspx" path="C:\dev\erp_s7\portalcfd\proveedores\proveedores.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\proveedores\recibir.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\proveedores\recibir.aspx" />
+  <event action="Analyze" type="Success" name="recibir.aspx" path="C:\dev\erp_s7\portalcfd\proveedores\recibir.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\proveedores\recibirorden.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\proveedores\recibirorden.aspx" />
+  <event action="Analyze" type="Success" name="recibirorden.aspx" path="C:\dev\erp_s7\portalcfd\proveedores\recibirorden.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\reportes\cartera.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\reportes\cartera.aspx" />
+  <event action="Analyze" type="Success" name="cartera.aspx" path="C:\dev\erp_s7\portalcfd\reportes\cartera.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\reportes\carteraGraf.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\reportes\carteraGraf.aspx" />
+  <event action="Analyze" type="Success" name="carteraGraf.aspx" path="C:\dev\erp_s7\portalcfd\reportes\carteraGraf.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\reportes\cobranzaDiv.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\reportes\cobranzaDiv.aspx" />
+  <event action="Analyze" type="Success" name="cobranzaDiv.aspx" path="C:\dev\erp_s7\portalcfd\reportes\cobranzaDiv.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\reportes\consignaciones.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\reportes\consignaciones.aspx" />
+  <event action="Analyze" type="Success" name="consignaciones.aspx" path="C:\dev\erp_s7\portalcfd\reportes\consignaciones.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\reportes\historicoDiv.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\reportes\historicoDiv.aspx" />
+  <event action="Analyze" type="Success" name="historicoDiv.aspx" path="C:\dev\erp_s7\portalcfd\reportes\historicoDiv.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\reportes\ingresosDiv.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\reportes\ingresosDiv.aspx" />
+  <event action="Analyze" type="Success" name="ingresosDiv.aspx" path="C:\dev\erp_s7\portalcfd\reportes\ingresosDiv.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\reportes\inventarios.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\reportes\inventarios.aspx" />
+  <event action="Analyze" type="Success" name="inventarios.aspx" path="C:\dev\erp_s7\portalcfd\reportes\inventarios.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\reportes\inventarios2.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\reportes\inventarios2.aspx" />
+  <event action="Analyze" type="Success" name="inventarios2.aspx" path="C:\dev\erp_s7\portalcfd\reportes\inventarios2.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\reportes\productos.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\reportes\productos.aspx" />
+  <event action="Analyze" type="Success" name="productos.aspx" path="C:\dev\erp_s7\portalcfd\reportes\productos.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\Reportes.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\Reportes.aspx" />
+  <event action="Analyze" type="Success" name="Reportes.aspx" path="C:\dev\erp_s7\portalcfd\Reportes.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\Salir.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\Salir.aspx" />
+  <event action="Analyze" type="Success" name="Salir.aspx" path="C:\dev\erp_s7\portalcfd\Salir.aspx" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\TimbradoNomina.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\TimbradoNomina.aspx" />
+  <event action="Analyze" type="Success" name="TimbradoNomina.aspx" path="C:\dev\erp_s7\portalcfd\TimbradoNomina.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\UserControls_PortalCFD\Menu_PortalCFD.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\UserControls_PortalCFD\Menu_PortalCFD.ascx" />
+  <event action="Analyze" type="Success" name="Menu_PortalCFD.ascx" path="C:\dev\erp_s7\portalcfd\UserControls_PortalCFD\Menu_PortalCFD.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\UserControls_PortalCFD\SystemHeader_PortalCFD.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\UserControls_PortalCFD\SystemHeader_PortalCFD.ascx" />
+  <event action="Analyze" type="Success" name="SystemHeader_PortalCFD.ascx" path="C:\dev\erp_s7\portalcfd\UserControls_PortalCFD\SystemHeader_PortalCFD.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\usuarios\perfiles.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\usuarios\perfiles.aspx" />
+  <event action="Analyze" type="Success" name="perfiles.aspx" path="C:\dev\erp_s7\portalcfd\usuarios\perfiles.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\dev\erp_s7\portalcfd\usuarios\usuarios.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\dev\erp_s7\portalcfd\usuarios\usuarios.aspx" />
+  <event action="Analyze" type="Success" name="usuarios.aspx" path="C:\dev\erp_s7\portalcfd\usuarios\usuarios.aspx" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\dev\erp_s7\web.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\dev\erp_s7\web.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\dev\erp_s7\web.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\dev\erp_s7\web.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\dev\erp_s7\web.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\dev\erp_s7\web.config" />
+  <event action="Analyze" type="Success" name="web.config" path="C:\dev\erp_s7\web.config" />
+  <event action="Analyze" type="Success" name="erp_s7" path="C:\dev\erp_s7\erp_s7.vbproj" />
+  <event action="Analyze" type="Success" name="erp_s7" path="C:\dev\erp_s7\erp_s7.sln" />
+</log>

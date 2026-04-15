@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://erp.natural.gs/portalcfd/pedidos/webservice/Etiquetas.asmx?wsdl" docRef="http://erp.natural.gs/portalcfd/pedidos/webservice/Etiquetas.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://erp.natural.gs/portalcfd/pedidos/webservice/Etiquetas.asmx" xmlns:q1="http://erp.natural.gs/" binding="q1:EtiquetasSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://erp.natural.gs/portalcfd/pedidos/webservice/Etiquetas.asmx" xmlns:q2="http://erp.natural.gs/" binding="q2:EtiquetasSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

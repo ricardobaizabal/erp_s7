@@ -1,0 +1,45 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="erp_s7_FactureHoyNT_WsEmisionTimbradoService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://wsprod1.facturehoy.com:80/CFDI/WsEmisionTimbrado</Value>
+    </Setting>
+    <Setting Name="erp_s7_FactureHoyObtenerServiciosProducccion_WsServiciosService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://wsprod1.facturehoy.com:80/CFDI/WsServicios</Value>
+    </Setting>
+    <Setting Name="erp_s7_WsCancelacionFHCFDI33_WsCancelacionCFDI33" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://cancelacion.facturehoy.com:80/CancelacionCFDI33/WsCancelacionCFDI33</Value>
+    </Setting>
+    <Setting Name="erp_s7_SIFEI33_SIFEIService" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://sat.sifei.com.mx:8443/SIFEI/SIFEI</Value>
+    </Setting>
+    <Setting Name="erp_s7_SIFEI33Pruebas_SIFEIService" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://devcfdi.sifei.com.mx:8080/SIFEI33/SIFEI</Value>
+    </Setting>
+    <Setting Name="erp_s7_CancelacionSIFEI_Cancelacion" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://sat.sifei.com.mx:9000/CancelacionSIFEI/Cancelacion</Value>
+    </Setting>
+    <Setting Name="erp_s7_CancelacionPruebasSIFEI_Cancelacion" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://devcfdi.sifei.com.mx:8888/CancelacionSIFEI/Cancelacion</Value>
+    </Setting>
+    <Setting Name="erp_s7_SIFEI40_SIFEIService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://sat.sifei.com.mx:8443/SIFEI/SIFEI</Value>
+    </Setting>
+    <Setting Name="erp_s7_SIFEIPruebas40_SIFEIService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://devcfdi.sifei.com.mx:8080/SIFEI33/SIFEI</Value>
+    </Setting>
+    <Setting Name="erp_s7_CancelacionSIFEI40_Cancelacion" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://sat.sifei.com.mx:9000/CancelacionSIFEI/Cancelacion</Value>
+    </Setting>
+    <Setting Name="erp_s7_WsCancelacionFHCFDIV33_WsCancelacionCFDI33" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://cancelacion.facturehoy.com:80/CancelacionCFDI33/WsCancelacionCFDI33</Value>
+    </Setting>
+    <Setting Name="erp_s7_CancelacionPruebas_Cancelacion" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://devcfdi.sifei.com.mx:8888/CancelacionSIFEI/Cancelacion</Value>
+    </Setting>
+    <Setting Name="erp_s7_NgEtiquetas_Etiqueta" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://erp.natural.gs/portalcfd/pedidos/webservice/Etiquetas.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
