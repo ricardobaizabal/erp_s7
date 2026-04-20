@@ -7,6 +7,8 @@
     <title></title>
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
+    <!-- Favicon -->
+    <link type="image/x-icon" href="../images/LOGO_S7.png" rel="icon" />
 </head>
 <body>
     <form id="form1" runat="server">

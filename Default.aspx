@@ -7,6 +7,8 @@
     <title></title>
     <telerik:RadStyleSheetManager ID="RadStyleSheetManager1" runat="server" />
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <!-- Favicon -->
+    <link type="image/x-icon" href="../images/LOGO_S7.png" rel="icon" />
 </head>
 <body>
     <form id="form1" runat="server">
