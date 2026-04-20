@@ -14,6 +14,8 @@
     </asp:ContentPlaceHolder>
     
     <link href="Styles/Styles.css" rel="stylesheet" type="text/css" />
+    <!-- Favicon -->
+    <link type="image/x-icon" href="../images/LOGO_S7.png" rel="icon" />
     
 </head>
 
