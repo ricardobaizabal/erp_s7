@@ -578,7 +578,6 @@ Public Class Cotizaciones
         End Try
         Dim reporte As New CotizacionPDF
 
-        reporte.ReportParameters("paramImgBanner").Value = Server.MapPath("~/portalcfd/logos/" & "grupo-trina-logo.jpg")
         reporte.ReportParameters("paramImgBanner2").Value = Server.MapPath("~/portalcfd/logos/" & "none.png")
         reporte.ReportParameters("txtordenCompra").Value = ordenCompra
         reporte.ReportParameters("txtfechaCotizacion").Value = Format(fechaCotizacion, "dd MMMM yyyy")
@@ -592,7 +591,7 @@ Public Class Cotizaciones
             reporte.ReportParameters("txtContacto").Value = contacto
         End If
         'reporte.ReportParameters("txtEnviarA").Value = enviarA
-        reporte.ReportParameters("txtTitulo").Value = $"Cotización Folio No. GT-{cotizacionID}"
+        reporte.ReportParameters("txtTitulo").Value = $"Cotización Folio No. {cotizacionID}"
         '
         reporte.ReportParameters("txtRepVentas").Value = RepVentas
         reporte.ReportParameters("txtMailRepVentas").Value = MailRepVentas
@@ -614,6 +613,7 @@ Public Class Cotizaciones
                 reporte.ReportParameters("txtLinea4").Value = rs("txtLinea4")
                 reporte.ReportParameters("txtLinea5").Value = rs("txtLinea5")
                 reporte.ReportParameters("txtLinea6").Value = rs("txtLinea6")
+                reporte.ReportParameters("paramImgBanner").Value = Server.MapPath("~/portalcfd/logos/" & rs("logo_cotizacion").ToString)
             End If
 
         Catch ex As Exception
@@ -686,7 +686,6 @@ Public Class Cotizaciones
 
         Dim reporte As New CotizacionProductosPDF_elm.ReportePDF_USD
 
-        reporte.ReportParameters("paramImgBanner").Value = Server.MapPath("~/portalcfd/logos/" & "grupo-trina-logo.jpg")
         reporte.ReportParameters("paramImgBanner2").Value = Server.MapPath("~/portalcfd/logos/" & "none.png")
         reporte.ReportParameters("txtordenCompra").Value = ordenCompra
         reporte.ReportParameters("txtfechaCotizacion").Value = FormatDateTime(fechaCotizacion, DateFormat.ShortDate)
@@ -716,6 +715,7 @@ Public Class Cotizaciones
                 reporte.ReportParameters("txtLinea4").Value = rs("txtLinea4")
                 reporte.ReportParameters("txtLinea5").Value = rs("txtLinea5")
                 reporte.ReportParameters("txtLinea6").Value = rs("txtLinea6")
+                reporte.ReportParameters("paramImgBanner").Value = Server.MapPath("~/portalcfd/logos/" & rs("logo_cotizacion").ToString)
             End If
 
         Catch ex As Exception
