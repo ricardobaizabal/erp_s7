@@ -1,4 +1,4 @@
-<%@ Page Title="" Language="VB" MasterPageFile="~/portalcfd/MasterPage_PortalCFD.master" AutoEventWireup="false" Inherits="erp_s7.portalcfd_Clientes" CodeBehind="Clientes.aspx.vb" %>
+<%@ Page Title="" Language="VB" MasterPageFile="~/portalcfd/MasterPage_PortalCFD.master" AutoEventWireup="false" Inherits="erp_s7.portalcfd_Clientes" CodeBehind="Clientes.aspx.vb" ResponseEncoding="utf-8" Culture="es-MX" UICulture="es-MX" %>
 
 <%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
 
@@ -71,7 +71,7 @@
                                 <CommandItemSettings ShowRefreshButton="false" ShowExportToExcelButton="true" ShowAddNewRecordButton="false" ShowExportToPdfButton="false" ExportToPdfText="Exportar a pdf" ExportToExcelText="Exportar a excel"></CommandItemSettings>
                                 <Columns>
                                     <telerik:GridBoundColumn DataField="id" HeaderText="No. Cte" UniqueName="id"></telerik:GridBoundColumn>
-                                    <telerik:GridTemplateColumn AllowFiltering="true" HeaderText="Raz�n Social" UniqueName="Edit">
+                                    <telerik:GridTemplateColumn AllowFiltering="true" HeaderText="Razon Social" UniqueName="Edit">
                                         <ItemTemplate>
                                             <asp:LinkButton ID="lnkEdit" runat="server" CommandArgument='<%# Eval("id") %>' CommandName="cmdEdit" Text='<%# Eval("razonsocial") %>' CausesValidation="false"></asp:LinkButton>
                                         </ItemTemplate>
@@ -131,7 +131,7 @@
                         <table width="100%" border="0">
                             <tr>
                                 <td colspan="3" style="width: 100%; background-color: GrayText; color: White; font-family: Arial; padding-left: 10px; height: 25px;">
-                                    <asp:Label ID="lblSeccion1" runat="server" Text="Datos de facturaci�n"></asp:Label>
+                                    <asp:Label ID="lblSeccion1" runat="server" Text="Datos de facturacion"></asp:Label>
                                 </td>
                             </tr>
                             <tr>
@@ -166,7 +166,7 @@
                                     <asp:Label ID="lblSocialReason" runat="server" CssClass="item" Font-Bold="True"></asp:Label>
                                 </td>
                                 <td width="33%">
-	                                <asp:Label ID="Label8" runat="server" CssClass="item" Font-Bold="True" Text="Denominaci�n/Raz�n Social:"/>
+	                                <asp:Label ID="Label8" runat="server" CssClass="item" Font-Bold="True" Text="Denominacion Razon Social:"/>
                                 </td>
                                 <td width="33%">
                                     <asp:Label ID="lblPriceType" runat="server" CssClass="item" Font-Bold="true" Text="Tipo de precio:"></asp:Label>
@@ -243,17 +243,17 @@
                             </tr>
                             <tr>
                                 <td width="33%">
-                                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ForeColor="Red" SetFocusOnError="true" Text="Formato no v�lido"
+                                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ForeColor="Red" SetFocusOnError="true" Text="Formato no válido"
                                         ControlToValidate="txtContactEmail" CssClass="error"
                                         ValidationExpression=".*@.*\..*" ValidationGroup="Grupo1"></asp:RegularExpressionValidator>
                                 </td>
                                 <td width="33%">
-                                    <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ForeColor="Red" SetFocusOnError="true" Text="Formato no v�lido"
+                                    <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ForeColor="Red" SetFocusOnError="true" Text="Formato no válido"
                                         ControlToValidate="txtCC" CssClass="error"
                                         ValidationExpression=".*@.*\..*" ValidationGroup="Grupo1"></asp:RegularExpressionValidator>
                                 </td>
                                 <td width="33%">
-                                    <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ForeColor="Red" SetFocusOnError="true" Text="Formato no v�lido"
+                                    <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ForeColor="Red" SetFocusOnError="true" Text="Formato no válido"
                                         ControlToValidate="txtCCO" CssClass="error"
                                         ValidationExpression=".*@.*\..*" ValidationGroup="Grupo1"></asp:RegularExpressionValidator>
                                 </td>
@@ -266,7 +266,7 @@
                                     <asp:Label ID="Label4" runat="server" CssClass="item" Text="Email del Contacto:" Font-Bold="True"></asp:Label>
                                 </td>
                                 <td width="33%">
-                                    <asp:Label ID="Label5" runat="server" CssClass="item" Text="Tel�fono del Contacto:" Font-Bold="True"></asp:Label>
+                                    <asp:Label ID="Label5" runat="server" CssClass="item" Text="Telefono del Contacto:" Font-Bold="True"></asp:Label>
                                 </td>
                             </tr>
                             <tr>
@@ -402,7 +402,7 @@
                             </tr>
                             <tr>
                                 <td colspan="3">
-                                    <asp:Label ID="lblfactoraje" runat="server" CssClass="item" Font-Bold="true" Text="Instituci�n de Factoraje:"></asp:Label>
+                                    <asp:Label ID="lblfactoraje" runat="server" CssClass="item" Font-Bold="true" Text="Institucion de Factoraje:"></asp:Label>
                                     <asp:CheckBox ID="checkfactoraje" runat="server" CssClass="item" Font-Bold="true"></asp:CheckBox>
                                 </td>
                             </tr>
@@ -465,7 +465,7 @@
                                     <asp:Label ID="lblDescuento" runat="server" Text="Descuento:" CssClass="item" Font-Bold="True"></asp:Label>
                                 </td>
                                 <td>
-                                    <asp:Label ID="lblLimiteCredito" runat="server" Text="L�mite de Cr�dito:" CssClass="item" Font-Bold="True"></asp:Label>
+                                    <asp:Label ID="lblLimiteCredito" runat="server" Text="Limite de Credito:" CssClass="item" Font-Bold="True"></asp:Label>
                                 </td>
                             </tr>
                             <tr>
@@ -615,7 +615,7 @@
                             </tr>
                             <tr>
                                 <td colspan="3" style="width: 100%; background-color: GrayText; color: White; font-family: Arial; padding-left: 10px; height: 25px;">
-                                    <asp:Label ID="lblDatosEnvio" runat="server" Text="Datos de env�o"></asp:Label>
+                                    <asp:Label ID="lblDatosEnvio" runat="server" Text="Datos de envio"></asp:Label>
                                 </td>
                             </tr>
                             <tr>
@@ -690,7 +690,7 @@
                                     <asp:Label ID="lblEnvioEmail" runat="server" CssClass="item" Font-Bold="True"></asp:Label>
                                 </td>
                                 <td width="33%">
-                                    <asp:Label ID="lblEnvioTelefono" runat="server" Text="Tel�fono:" CssClass="item" Font-Bold="True"></asp:Label>
+                                    <asp:Label ID="lblEnvioTelefono" runat="server" Text="Telefono:" CssClass="item" Font-Bold="True"></asp:Label>
                                 </td>
                             </tr>
                             <tr>
@@ -793,7 +793,7 @@
                             </tr>
                             <tr>
                                 <td style="width: 30%;">
-                                    <asp:Label ID="lblNonCuenta" runat="server" CssClass="item" Font-Bold="True" Text="N�mero de Cuenta:"></asp:Label>
+                                    <asp:Label ID="lblNonCuenta" runat="server" CssClass="item" Font-Bold="True" Text="Número de Cuenta:"></asp:Label>
                                 </td>
                                 <td style="width: 30%;">
                                     <asp:Label ID="Label7" runat="server" CssClass="item" Font-Bold="True" Text="Predeterminado:"></asp:Label>
