@@ -9,8 +9,15 @@
 	<add key="usuarios" value="1" />
 	<add key="Telerik.ScriptManager.TelerikCdn" value="Disabled" />
 	<add key="Telerik.StyleSheetManager.TelerikCdn" value="Disabled" />
-	<add key="SIFEIUsuario" value="MUMR6604247X9" />
+	
+	<!-- Credenciales de prueba -->
+	<!--<add key="SIFEIUsuario" value="MUMR6604247X9" />
 	<add key="SIFEIContrasena" value="650976ba" />
-	<add key="SIFEIIdEquipo" value="ZDZmMzVlZjgtOWNlYi0xNjE3LWY3ZGUtNTJkODQ1MjIyMWFi" />
+	<add key="SIFEIIdEquipo" value="ZDZmMzVlZjgtOWNlYi0xNjE3LWY3ZGUtNTJkODQ1MjIyMWFi" />-->
+
+	<!-- Credenciales de produccion -->
+	<add key="SIFEIUsuario" value="LST101206985" />
+	<add key="SIFEIContrasena" value="d77ab121" />
+	<add key="SIFEIIdEquipo" value="NDE0OTFlOTEtOGQxYi1mODM3LWRlOWMtNWE3YTJlNWE0ZTgy" />
 	<add key="email_pedidos" value="administracion@s7.com" />
 </appSettings>
