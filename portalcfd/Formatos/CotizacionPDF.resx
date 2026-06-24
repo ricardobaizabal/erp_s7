@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="boxSelloCFDI.Value" xml:space="preserve">
-    <value>■ Los pagos por transferencias electrónicas y/o depósitos bancarios, deberán efectuarse a la cuenta de Grupo Trina. 
+    <value>■ Los pagos por transferencias electrónicas y/o depósitos bancarios, deberán efectuarse a la cuenta.
 ■ En caso de pagos en efectivo, deberán entregarse en nuestras oficinas.
 ■ Precios en Moneda Nacional más IVA.
 ■ Los precios están sujetos a cambio sin previo aviso.
@@ -128,7 +128,7 @@
 ■ No incluye acarreos.
 ■ Para poder procesar su pedido, es necesario confirmar por correo electrónico la presente cotización, adjuntando el comprobante de pago.
 ■ La presente cotización tiene una vigencia de 10 días naturales a partir de la fecha en que se elaboró la misma.
-■ Todas las líneas de producto que Grupo Trina distribuye, están fabricadas con materiales de alta tecnología, cumpliendo los estándares de calidad.
+■ Todas las líneas de producto que se distribuye, están fabricadas con materiales de alta tecnología, cumpliendo los estándares de calidad.
 ■ "Por un Mejor Planeta, Di NO al PVC"</value>
   </data>
   <metadata name="$this.Zoom" type="System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
