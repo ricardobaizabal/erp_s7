@@ -61,6 +61,8 @@ Partial Class CotizacionPDF
         Me.panelCliente = New Telerik.Reporting.Panel()
         Me.boxRazonSocial = New Telerik.Reporting.TextBox()
         Me.boxCalleNum = New Telerik.Reporting.TextBox()
+        Me.TextBox32 = New Telerik.Reporting.TextBox()
+        Me.TextBox33 = New Telerik.Reporting.TextBox()
         Me.headerImporte = New Telerik.Reporting.TextBox()
         Me.headerCant = New Telerik.Reporting.TextBox()
         Me.headerUnidad = New Telerik.Reporting.TextBox()
@@ -122,8 +124,6 @@ Partial Class CotizacionPDF
         Me.TextBox37 = New Telerik.Reporting.TextBox()
         Me.AggregationInstanceMeasure1 = New Microsoft.AnalysisServices.AggregationInstanceMeasure()
         Me.TextBox20 = New Telerik.Reporting.TextBox()
-        Me.TextBox32 = New Telerik.Reporting.TextBox()
-        Me.TextBox33 = New Telerik.Reporting.TextBox()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         '
         'pageHeaderSection1
@@ -317,6 +317,26 @@ Partial Class CotizacionPDF
         Me.boxCalleNum.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left
         Me.boxCalleNum.Value = "= Parameters.txtCobrarA.Value"
         '
+        'TextBox32
+        '
+        Me.TextBox32.Location = New Telerik.Reporting.Drawing.PointU(New Telerik.Reporting.Drawing.Unit(0.000039376151107717305R, Telerik.Reporting.Drawing.UnitType.Inch), New Telerik.Reporting.Drawing.Unit(0.46488171815872192R, Telerik.Reporting.Drawing.UnitType.Inch))
+        Me.TextBox32.Name = "TextBox32"
+        Me.TextBox32.Size = New Telerik.Reporting.Drawing.SizeU(New Telerik.Reporting.Drawing.Unit(3.4000000953674316R, Telerik.Reporting.Drawing.UnitType.Inch), New Telerik.Reporting.Drawing.Unit(0.12999999523162842R, Telerik.Reporting.Drawing.UnitType.Inch))
+        Me.TextBox32.Style.Font.Bold = True
+        Me.TextBox32.Style.Font.Size = New Telerik.Reporting.Drawing.Unit(6.0R, Telerik.Reporting.Drawing.UnitType.Point)
+        Me.TextBox32.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left
+        Me.TextBox32.Value = "Contacto:"
+        '
+        'TextBox33
+        '
+        Me.TextBox33.Location = New Telerik.Reporting.Drawing.PointU(New Telerik.Reporting.Drawing.Unit(0R, Telerik.Reporting.Drawing.UnitType.Inch), New Telerik.Reporting.Drawing.Unit(0.59496051073074341R, Telerik.Reporting.Drawing.UnitType.Inch))
+        Me.TextBox33.Name = "TextBox33"
+        Me.TextBox33.Size = New Telerik.Reporting.Drawing.SizeU(New Telerik.Reporting.Drawing.Unit(3.7000000476837158R, Telerik.Reporting.Drawing.UnitType.Inch), New Telerik.Reporting.Drawing.Unit(0.20500005781650543R, Telerik.Reporting.Drawing.UnitType.Inch))
+        Me.TextBox33.Style.Font.Bold = False
+        Me.TextBox33.Style.Font.Size = New Telerik.Reporting.Drawing.Unit(6.0R, Telerik.Reporting.Drawing.UnitType.Point)
+        Me.TextBox33.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left
+        Me.TextBox33.Value = "= Parameters.txtContacto.Value"
+        '
         'headerImporte
         '
         Me.headerImporte.Location = New Telerik.Reporting.Drawing.PointU(New Telerik.Reporting.Drawing.Unit(6.630000114440918R, Telerik.Reporting.Drawing.UnitType.Inch), New Telerik.Reporting.Drawing.Unit(2.869999885559082R, Telerik.Reporting.Drawing.UnitType.Inch))
@@ -430,7 +450,7 @@ Partial Class CotizacionPDF
         Me.Panel7.Items.AddRange(New Telerik.Reporting.ReportItemBase() {Me.TextBox8, Me.TextBox10, Me.TextBox18})
         Me.Panel7.Location = New Telerik.Reporting.Drawing.PointU(New Telerik.Reporting.Drawing.Unit(0.032000001519918442R, Telerik.Reporting.Drawing.UnitType.Inch), New Telerik.Reporting.Drawing.Unit(1.465999960899353R, Telerik.Reporting.Drawing.UnitType.Inch))
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New Telerik.Reporting.Drawing.SizeU(New Telerik.Reporting.Drawing.Unit(7.5999999046325684R, Telerik.Reporting.Drawing.UnitType.Inch), New Telerik.Reporting.Drawing.Unit(0.5339999794960022R, Telerik.Reporting.Drawing.UnitType.Inch))
+        Me.Panel7.Size = New Telerik.Reporting.Drawing.SizeU(New Telerik.Reporting.Drawing.Unit(7.5999999046325684R, Telerik.Reporting.Drawing.UnitType.Inch), New Telerik.Reporting.Drawing.Unit(0.56400001049041748R, Telerik.Reporting.Drawing.UnitType.Inch))
         Me.Panel7.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.None
         Me.Panel7.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid
         Me.Panel7.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.Solid
@@ -441,15 +461,16 @@ Partial Class CotizacionPDF
         'TextBox8
         '
         Me.TextBox8.CanShrink = True
-        Me.TextBox8.Location = New Telerik.Reporting.Drawing.PointU(New Telerik.Reporting.Drawing.Unit(0R, Telerik.Reporting.Drawing.UnitType.Inch), New Telerik.Reporting.Drawing.Unit(0.33399999141693115R, Telerik.Reporting.Drawing.UnitType.Inch))
+        Me.TextBox8.Location = New Telerik.Reporting.Drawing.PointU(New Telerik.Reporting.Drawing.Unit(0R, Telerik.Reporting.Drawing.UnitType.Inch), New Telerik.Reporting.Drawing.Unit(0.36407890915870667R, Telerik.Reporting.Drawing.UnitType.Inch))
         Me.TextBox8.Name = "TextBox8"
         Me.TextBox8.Size = New Telerik.Reporting.Drawing.SizeU(New Telerik.Reporting.Drawing.Unit(3.0090000629425049R, Telerik.Reporting.Drawing.UnitType.Inch), New Telerik.Reporting.Drawing.Unit(0.12999999523162842R, Telerik.Reporting.Drawing.UnitType.Inch))
         Me.TextBox8.Style.Font.Size = New Telerik.Reporting.Drawing.Unit(6.0R, Telerik.Reporting.Drawing.UnitType.Point)
+        Me.TextBox8.Style.Visible = False
         Me.TextBox8.Value = "= Parameters.txtMailRepVentas.Value"
         '
         'TextBox10
         '
-        Me.TextBox10.Location = New Telerik.Reporting.Drawing.PointU(New Telerik.Reporting.Drawing.Unit(0R, Telerik.Reporting.Drawing.UnitType.Inch), New Telerik.Reporting.Drawing.Unit(0.13400000333786011R, Telerik.Reporting.Drawing.UnitType.Inch))
+        Me.TextBox10.Location = New Telerik.Reporting.Drawing.PointU(New Telerik.Reporting.Drawing.Unit(0R, Telerik.Reporting.Drawing.UnitType.Inch), New Telerik.Reporting.Drawing.Unit(0.23399999737739563R, Telerik.Reporting.Drawing.UnitType.Inch))
         Me.TextBox10.Name = "TextBox10"
         Me.TextBox10.Size = New Telerik.Reporting.Drawing.SizeU(New Telerik.Reporting.Drawing.Unit(1.1000000238418579R, Telerik.Reporting.Drawing.UnitType.Inch), New Telerik.Reporting.Drawing.Unit(0.12999999523162842R, Telerik.Reporting.Drawing.UnitType.Inch))
         Me.TextBox10.Style.Font.Bold = True
@@ -461,7 +482,7 @@ Partial Class CotizacionPDF
         'TextBox18
         '
         Me.TextBox18.CanShrink = True
-        Me.TextBox18.Location = New Telerik.Reporting.Drawing.PointU(New Telerik.Reporting.Drawing.Unit(1.1000000238418579R, Telerik.Reporting.Drawing.UnitType.Inch), New Telerik.Reporting.Drawing.Unit(0.13400000333786011R, Telerik.Reporting.Drawing.UnitType.Inch))
+        Me.TextBox18.Location = New Telerik.Reporting.Drawing.PointU(New Telerik.Reporting.Drawing.Unit(1.1000000238418579R, Telerik.Reporting.Drawing.UnitType.Inch), New Telerik.Reporting.Drawing.Unit(0.23399999737739563R, Telerik.Reporting.Drawing.UnitType.Inch))
         Me.TextBox18.Name = "TextBox18"
         Me.TextBox18.Size = New Telerik.Reporting.Drawing.SizeU(New Telerik.Reporting.Drawing.Unit(2.1489999294281006R, Telerik.Reporting.Drawing.UnitType.Inch), New Telerik.Reporting.Drawing.Unit(0.12999999523162842R, Telerik.Reporting.Drawing.UnitType.Inch))
         Me.TextBox18.Style.Font.Size = New Telerik.Reporting.Drawing.Unit(6.0R, Telerik.Reporting.Drawing.UnitType.Point)
@@ -484,9 +505,9 @@ Partial Class CotizacionPDF
         'TextBox9
         '
         Me.TextBox9.CanShrink = True
-        Me.TextBox9.Location = New Telerik.Reporting.Drawing.PointU(New Telerik.Reporting.Drawing.Unit(0R, Telerik.Reporting.Drawing.UnitType.Inch), New Telerik.Reporting.Drawing.Unit(0.010999999940395355R, Telerik.Reporting.Drawing.UnitType.Inch))
+        Me.TextBox9.Location = New Telerik.Reporting.Drawing.PointU(New Telerik.Reporting.Drawing.Unit(0R, Telerik.Reporting.Drawing.UnitType.Inch), New Telerik.Reporting.Drawing.Unit(0.28700008988380432R, Telerik.Reporting.Drawing.UnitType.Inch))
         Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New Telerik.Reporting.Drawing.SizeU(New Telerik.Reporting.Drawing.Unit(2.5199999809265137R, Telerik.Reporting.Drawing.UnitType.Inch), New Telerik.Reporting.Drawing.Unit(0.1379999965429306R, Telerik.Reporting.Drawing.UnitType.Inch))
+        Me.TextBox9.Size = New Telerik.Reporting.Drawing.SizeU(New Telerik.Reporting.Drawing.Unit(2.5199999809265137R, Telerik.Reporting.Drawing.UnitType.Inch), New Telerik.Reporting.Drawing.Unit(0.10000000149011612R, Telerik.Reporting.Drawing.UnitType.Inch))
         Me.TextBox9.Style.Font.Bold = True
         Me.TextBox9.Style.Font.Size = New Telerik.Reporting.Drawing.Unit(6.0R, Telerik.Reporting.Drawing.UnitType.Point)
         Me.TextBox9.Value = "= Parameters.txtLinea1.Value"
@@ -503,45 +524,45 @@ Partial Class CotizacionPDF
         'TextBox12
         '
         Me.TextBox12.CanShrink = True
-        Me.TextBox12.Location = New Telerik.Reporting.Drawing.PointU(New Telerik.Reporting.Drawing.Unit(0R, Telerik.Reporting.Drawing.UnitType.Inch), New Telerik.Reporting.Drawing.Unit(0.14900000393390656R, Telerik.Reporting.Drawing.UnitType.Inch))
+        Me.TextBox12.Location = New Telerik.Reporting.Drawing.PointU(New Telerik.Reporting.Drawing.Unit(0R, Telerik.Reporting.Drawing.UnitType.Inch), New Telerik.Reporting.Drawing.Unit(0.39168465137481689R, Telerik.Reporting.Drawing.UnitType.Inch))
         Me.TextBox12.Name = "TextBox12"
-        Me.TextBox12.Size = New Telerik.Reporting.Drawing.SizeU(New Telerik.Reporting.Drawing.Unit(2.4200000762939453R, Telerik.Reporting.Drawing.UnitType.Inch), New Telerik.Reporting.Drawing.Unit(0.1379999965429306R, Telerik.Reporting.Drawing.UnitType.Inch))
+        Me.TextBox12.Size = New Telerik.Reporting.Drawing.SizeU(New Telerik.Reporting.Drawing.Unit(2.4200000762939453R, Telerik.Reporting.Drawing.UnitType.Inch), New Telerik.Reporting.Drawing.Unit(0.10000000149011612R, Telerik.Reporting.Drawing.UnitType.Inch))
         Me.TextBox12.Style.Font.Size = New Telerik.Reporting.Drawing.Unit(6.0R, Telerik.Reporting.Drawing.UnitType.Point)
         Me.TextBox12.Value = "= Parameters.txtLinea2.Value"
         '
         'TextBox13
         '
         Me.TextBox13.CanShrink = True
-        Me.TextBox13.Location = New Telerik.Reporting.Drawing.PointU(New Telerik.Reporting.Drawing.Unit(0R, Telerik.Reporting.Drawing.UnitType.Inch), New Telerik.Reporting.Drawing.Unit(0.28700000047683716R, Telerik.Reporting.Drawing.UnitType.Inch))
+        Me.TextBox13.Location = New Telerik.Reporting.Drawing.PointU(New Telerik.Reporting.Drawing.Unit(0R, Telerik.Reporting.Drawing.UnitType.Inch), New Telerik.Reporting.Drawing.Unit(0.49176350235939026R, Telerik.Reporting.Drawing.UnitType.Inch))
         Me.TextBox13.Name = "TextBox13"
-        Me.TextBox13.Size = New Telerik.Reporting.Drawing.SizeU(New Telerik.Reporting.Drawing.Unit(2.4200000762939453R, Telerik.Reporting.Drawing.UnitType.Inch), New Telerik.Reporting.Drawing.Unit(0.1379999965429306R, Telerik.Reporting.Drawing.UnitType.Inch))
+        Me.TextBox13.Size = New Telerik.Reporting.Drawing.SizeU(New Telerik.Reporting.Drawing.Unit(2.4200000762939453R, Telerik.Reporting.Drawing.UnitType.Inch), New Telerik.Reporting.Drawing.Unit(0.10000000149011612R, Telerik.Reporting.Drawing.UnitType.Inch))
         Me.TextBox13.Style.Font.Size = New Telerik.Reporting.Drawing.Unit(6.0R, Telerik.Reporting.Drawing.UnitType.Point)
         Me.TextBox13.Value = "= Parameters.txtLinea3.Value"
         '
         'TextBox15
         '
         Me.TextBox15.CanShrink = True
-        Me.TextBox15.Location = New Telerik.Reporting.Drawing.PointU(New Telerik.Reporting.Drawing.Unit(0R, Telerik.Reporting.Drawing.UnitType.Inch), New Telerik.Reporting.Drawing.Unit(0.42500001192092896R, Telerik.Reporting.Drawing.UnitType.Inch))
+        Me.TextBox15.Location = New Telerik.Reporting.Drawing.PointU(New Telerik.Reporting.Drawing.Unit(0R, Telerik.Reporting.Drawing.UnitType.Inch), New Telerik.Reporting.Drawing.Unit(0.59184235334396362R, Telerik.Reporting.Drawing.UnitType.Inch))
         Me.TextBox15.Name = "TextBox15"
-        Me.TextBox15.Size = New Telerik.Reporting.Drawing.SizeU(New Telerik.Reporting.Drawing.Unit(2.4200000762939453R, Telerik.Reporting.Drawing.UnitType.Inch), New Telerik.Reporting.Drawing.Unit(0.1379999965429306R, Telerik.Reporting.Drawing.UnitType.Inch))
+        Me.TextBox15.Size = New Telerik.Reporting.Drawing.SizeU(New Telerik.Reporting.Drawing.Unit(2.4200000762939453R, Telerik.Reporting.Drawing.UnitType.Inch), New Telerik.Reporting.Drawing.Unit(0.10000000149011612R, Telerik.Reporting.Drawing.UnitType.Inch))
         Me.TextBox15.Style.Font.Size = New Telerik.Reporting.Drawing.Unit(6.0R, Telerik.Reporting.Drawing.UnitType.Point)
         Me.TextBox15.Value = "= Parameters.txtLinea4.Value"
         '
         'TextBox17
         '
         Me.TextBox17.CanShrink = True
-        Me.TextBox17.Location = New Telerik.Reporting.Drawing.PointU(New Telerik.Reporting.Drawing.Unit(0R, Telerik.Reporting.Drawing.UnitType.Inch), New Telerik.Reporting.Drawing.Unit(0.56300002336502075R, Telerik.Reporting.Drawing.UnitType.Inch))
+        Me.TextBox17.Location = New Telerik.Reporting.Drawing.PointU(New Telerik.Reporting.Drawing.Unit(0R, Telerik.Reporting.Drawing.UnitType.Inch), New Telerik.Reporting.Drawing.Unit(0.6919211745262146R, Telerik.Reporting.Drawing.UnitType.Inch))
         Me.TextBox17.Name = "TextBox17"
-        Me.TextBox17.Size = New Telerik.Reporting.Drawing.SizeU(New Telerik.Reporting.Drawing.Unit(2.4000000953674316R, Telerik.Reporting.Drawing.UnitType.Inch), New Telerik.Reporting.Drawing.Unit(0.1379999965429306R, Telerik.Reporting.Drawing.UnitType.Inch))
+        Me.TextBox17.Size = New Telerik.Reporting.Drawing.SizeU(New Telerik.Reporting.Drawing.Unit(2.4000000953674316R, Telerik.Reporting.Drawing.UnitType.Inch), New Telerik.Reporting.Drawing.Unit(0.10000000149011612R, Telerik.Reporting.Drawing.UnitType.Inch))
         Me.TextBox17.Style.Font.Size = New Telerik.Reporting.Drawing.Unit(6.0R, Telerik.Reporting.Drawing.UnitType.Point)
         Me.TextBox17.Value = "= Parameters.txtLinea5.Value"
         '
         'TextBox19
         '
         Me.TextBox19.CanShrink = True
-        Me.TextBox19.Location = New Telerik.Reporting.Drawing.PointU(New Telerik.Reporting.Drawing.Unit(0R, Telerik.Reporting.Drawing.UnitType.Inch), New Telerik.Reporting.Drawing.Unit(0.70099997520446777R, Telerik.Reporting.Drawing.UnitType.Inch))
+        Me.TextBox19.Location = New Telerik.Reporting.Drawing.PointU(New Telerik.Reporting.Drawing.Unit(0R, Telerik.Reporting.Drawing.UnitType.Inch), New Telerik.Reporting.Drawing.Unit(0.79199999570846558R, Telerik.Reporting.Drawing.UnitType.Inch))
         Me.TextBox19.Name = "TextBox19"
-        Me.TextBox19.Size = New Telerik.Reporting.Drawing.SizeU(New Telerik.Reporting.Drawing.Unit(2.4000000953674316R, Telerik.Reporting.Drawing.UnitType.Inch), New Telerik.Reporting.Drawing.Unit(0.1379999965429306R, Telerik.Reporting.Drawing.UnitType.Inch))
+        Me.TextBox19.Size = New Telerik.Reporting.Drawing.SizeU(New Telerik.Reporting.Drawing.Unit(2.4000000953674316R, Telerik.Reporting.Drawing.UnitType.Inch), New Telerik.Reporting.Drawing.Unit(0.10000000149011612R, Telerik.Reporting.Drawing.UnitType.Inch))
         Me.TextBox19.Style.Font.Size = New Telerik.Reporting.Drawing.Unit(6.0R, Telerik.Reporting.Drawing.UnitType.Point)
         Me.TextBox19.Value = "= Parameters.txtLinea6.Value"
         '
@@ -560,10 +581,10 @@ Partial Class CotizacionPDF
         '
         'imgBanner
         '
-        Me.imgBanner.Location = New Telerik.Reporting.Drawing.PointU(New Telerik.Reporting.Drawing.Unit(1.1000000238418579R, Telerik.Reporting.Drawing.UnitType.Inch), New Telerik.Reporting.Drawing.Unit(0.0560000017285347R, Telerik.Reporting.Drawing.UnitType.Inch))
+        Me.imgBanner.Location = New Telerik.Reporting.Drawing.PointU(New Telerik.Reporting.Drawing.Unit(0.000039376151107717305R, Telerik.Reporting.Drawing.UnitType.Inch), New Telerik.Reporting.Drawing.Unit(0.000039418537198798731R, Telerik.Reporting.Drawing.UnitType.Inch))
         Me.imgBanner.MimeType = ""
         Me.imgBanner.Name = "imgBanner"
-        Me.imgBanner.Size = New Telerik.Reporting.Drawing.SizeU(New Telerik.Reporting.Drawing.Unit(2.2999999523162842R, Telerik.Reporting.Drawing.UnitType.Inch), New Telerik.Reporting.Drawing.Unit(0.44699999690055847R, Telerik.Reporting.Drawing.UnitType.Inch))
+        Me.imgBanner.Size = New Telerik.Reporting.Drawing.SizeU(New Telerik.Reporting.Drawing.Unit(2.5499606132507324R, Telerik.Reporting.Drawing.UnitType.Inch), New Telerik.Reporting.Drawing.Unit(0.56000000238418579R, Telerik.Reporting.Drawing.UnitType.Inch))
         Me.imgBanner.Sizing = Telerik.Reporting.Drawing.ImageSizeMode.Stretch
         Me.imgBanner.Value = "=Parameters.paramImgBanner.Value"
         '
@@ -1004,26 +1025,6 @@ Partial Class CotizacionPDF
         Me.TextBox20.Style.Font.Size = New Telerik.Reporting.Drawing.Unit(7.5R, Telerik.Reporting.Drawing.UnitType.Point)
         Me.TextBox20.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left
         Me.TextBox20.Value = "TOTAL"
-        '
-        'TextBox32
-        '
-        Me.TextBox32.Location = New Telerik.Reporting.Drawing.PointU(New Telerik.Reporting.Drawing.Unit(0.000039376151107717305R, Telerik.Reporting.Drawing.UnitType.Inch), New Telerik.Reporting.Drawing.Unit(0.46488171815872192R, Telerik.Reporting.Drawing.UnitType.Inch))
-        Me.TextBox32.Name = "TextBox32"
-        Me.TextBox32.Size = New Telerik.Reporting.Drawing.SizeU(New Telerik.Reporting.Drawing.Unit(3.4000000953674316R, Telerik.Reporting.Drawing.UnitType.Inch), New Telerik.Reporting.Drawing.Unit(0.12999999523162842R, Telerik.Reporting.Drawing.UnitType.Inch))
-        Me.TextBox32.Style.Font.Bold = True
-        Me.TextBox32.Style.Font.Size = New Telerik.Reporting.Drawing.Unit(6.0R, Telerik.Reporting.Drawing.UnitType.Point)
-        Me.TextBox32.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left
-        Me.TextBox32.Value = "Contacto:"
-        '
-        'TextBox33
-        '
-        Me.TextBox33.Location = New Telerik.Reporting.Drawing.PointU(New Telerik.Reporting.Drawing.Unit(0R, Telerik.Reporting.Drawing.UnitType.Inch), New Telerik.Reporting.Drawing.Unit(0.59496051073074341R, Telerik.Reporting.Drawing.UnitType.Inch))
-        Me.TextBox33.Name = "TextBox33"
-        Me.TextBox33.Size = New Telerik.Reporting.Drawing.SizeU(New Telerik.Reporting.Drawing.Unit(3.7000000476837158R, Telerik.Reporting.Drawing.UnitType.Inch), New Telerik.Reporting.Drawing.Unit(0.20500005781650543R, Telerik.Reporting.Drawing.UnitType.Inch))
-        Me.TextBox33.Style.Font.Bold = False
-        Me.TextBox33.Style.Font.Size = New Telerik.Reporting.Drawing.Unit(6.0R, Telerik.Reporting.Drawing.UnitType.Point)
-        Me.TextBox33.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left
-        Me.TextBox33.Value = "= Parameters.txtContacto.Value"
         '
         'CotizacionPDF
         '
