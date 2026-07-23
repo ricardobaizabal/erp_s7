@@ -735,7 +735,7 @@ Public Class Facturar
                 '
                 SellarCFD(Comprobante)
                 m_xmlDOM.InnerXml = (Replace(m_xmlDOM.InnerXml, "schemaLocation", "xsi:schemaLocation", , , CompareMethod.Text))
-                m_xmlDOM.Save(Server.MapPath("cfd_storage") & "\" & "gt_" & serie.ToString & folio.ToString & ".xml")
+                m_xmlDOM.Save(Server.MapPath("cfd_storage") & "\" & "s7_" & serie.ToString & folio.ToString & ".xml")
                 '
                 '   Realiza Timbrado
                 '
@@ -776,7 +776,7 @@ Public Class Facturar
                             '
                             '   Obtiene el UUID
                             '
-                            Dim filePath As String = Server.MapPath("~/portalcfd/cfd_storage/gt_") & serie.ToString & folio.ToString & "_timbrado.xml"
+                            Dim filePath As String = Server.MapPath("~/portalcfd/cfd_storage/s7_") & serie.ToString & folio.ToString & "_timbrado.xml"
                             Dim UUID() As String
                             ReDim UUID(0)
                             '
@@ -816,8 +816,8 @@ Public Class Facturar
                             '
                             '   Genera PDF
                             '
-                            If Not File.Exists(Server.MapPath("~/portalcfd/pdf") & "\gt_" & serie.ToString & folio.ToString & ".pdf") Then
-                                GuardaPDF(GeneraPDF(Session("CFD")), Server.MapPath("~/portalcfd/pdf") & "\gt_" & serie.ToString & folio.ToString & ".pdf")
+                            If Not File.Exists(Server.MapPath("~/portalcfd/pdf") & "\s7_" & serie.ToString & folio.ToString & ".pdf") Then
+                                GuardaPDF(GeneraPDF(Session("CFD")), Server.MapPath("~/portalcfd/pdf") & "\s7_" & serie.ToString & folio.ToString & ".pdf")
                             End If
                         End If
 
@@ -847,7 +847,7 @@ Public Class Facturar
 
     Private Function Comprimir()
         Dim zip As ZipFile = New ZipFile(serie.ToString & folio.ToString.ToString & ".zip")
-        zip.AddFile(Server.MapPath("~/portalcfd/cfd_storage/") & "gt_" & serie.ToString & folio.ToString & ".xml", "")
+        zip.AddFile(Server.MapPath("~/portalcfd/cfd_storage/") & "s7_" & serie.ToString & folio.ToString & ".xml", "")
         Dim ms As New MemoryStream()
         zip.Save(ms)
         data = ms.ToArray
@@ -868,7 +868,7 @@ Public Class Facturar
 
         Dim Path = Server.MapPath("~/portalcfd/cfd_storage/")
         If File.Exists(Path & archivo) Then
-            System.IO.File.Copy(Path & archivo, Path & "gt_" & serie.ToString & folio.ToString & "_timbrado.xml")
+            System.IO.File.Copy(Path & archivo, Path & "s7_" & serie.ToString & folio.ToString & "_timbrado.xml")
         End If
 
     End Function
@@ -1359,8 +1359,8 @@ Public Class Facturar
         '
         '   Genera PDF
         '
-        If Not File.Exists(Server.MapPath("~/portalcfd/pdf") & "\gt_" & serie.ToString & folio.ToString & ".pdf") Then
-            GuardaPDF(GeneraPDF_Documento(Session("CFD")), Server.MapPath("~/portalcfd/pdf") & "\gt_" & serie.ToString & folio.ToString & ".pdf")
+        If Not File.Exists(Server.MapPath("~/portalcfd/pdf") & "\s7_" & serie.ToString & folio.ToString & ".pdf") Then
+            GuardaPDF(GeneraPDF_Documento(Session("CFD")), Server.MapPath("~/portalcfd/pdf") & "\s7_" & serie.ToString & folio.ToString & ".pdf")
         End If
         '
         '
@@ -1630,11 +1630,11 @@ Public Class Facturar
         '
         '   Obtiene datos del cfdi para construir string del CBB
         '
-        rfcE = GetXmlAttribute(Server.MapPath("cfd_storage") & "\gt_" & serie.ToString & folio.ToString & "_timbrado.xml", "Rfc", "cfdi:Emisor")
-        rfcR = GetXmlAttribute(Server.MapPath("cfd_storage") & "\gt_" & serie.ToString & folio.ToString & "_timbrado.xml", "Rfc", "cfdi:Receptor")
-        total = GetXmlAttribute(Server.MapPath("cfd_storage") & "\gt_" & serie.ToString & folio.ToString & "_timbrado.xml", "Total", "cfdi:Comprobante")
-        UUID = GetXmlAttribute(Server.MapPath("cfd_storage") & "\gt_" & serie.ToString & folio.ToString & "_timbrado.xml", "UUID", "tfd:TimbreFiscalDigital")
-        sello = GetXmlAttribute(Server.MapPath("cfd_storage") & "\gt_" & serie.ToString & folio.ToString & "_timbrado.xml", "SelloCFD", "tfd:TimbreFiscalDigital")
+        rfcE = GetXmlAttribute(Server.MapPath("cfd_storage") & "\s7_" & serie.ToString & folio.ToString & "_timbrado.xml", "Rfc", "cfdi:Emisor")
+        rfcR = GetXmlAttribute(Server.MapPath("cfd_storage") & "\s7_" & serie.ToString & folio.ToString & "_timbrado.xml", "Rfc", "cfdi:Receptor")
+        total = GetXmlAttribute(Server.MapPath("cfd_storage") & "\s7_" & serie.ToString & folio.ToString & "_timbrado.xml", "Total", "cfdi:Comprobante")
+        UUID = GetXmlAttribute(Server.MapPath("cfd_storage") & "\s7_" & serie.ToString & folio.ToString & "_timbrado.xml", "UUID", "tfd:TimbreFiscalDigital")
+        sello = GetXmlAttribute(Server.MapPath("cfd_storage") & "\s7_" & serie.ToString & folio.ToString & "_timbrado.xml", "SelloCFD", "tfd:TimbreFiscalDigital")
         FinalSelloDigitalEmisor = Mid(sello, (Len(sello) - 7))
         '
         Dim totalDec As Decimal = CType(total, Decimal)
@@ -1735,7 +1735,7 @@ Public Class Facturar
         '
         Dim FlujoReader As XmlTextReader = Nothing
         Dim i As Integer
-        FlujoReader = New XmlTextReader(Server.MapPath("~/portalcfd/cfd_storage/gt_") & serie.ToString & folio.ToString & "_timbrado.xml")
+        FlujoReader = New XmlTextReader(Server.MapPath("~/portalcfd/cfd_storage/s7_") & serie.ToString & folio.ToString & "_timbrado.xml")
         FlujoReader.WhitespaceHandling = WhitespaceHandling.None
         While FlujoReader.Read()
             Select Case FlujoReader.NodeType
@@ -1911,19 +1911,19 @@ Public Class Facturar
                 reporte.ReportParameters("txtCondicionesPago").Value = condiciones
                 reporte.ReportParameters("paramImgCBB").Value = Server.MapPath("~/portalcfd/cbb/" & serie.ToString & folio.ToString & ".png")
                 reporte.ReportParameters("paramImgBanner").Value = Server.MapPath("~/portalcfd/logos/" & Session("logo_formato"))
-                reporte.ReportParameters("txtFechaEmision").Value = GetXmlAttribute(Server.MapPath("~/portalCFD/cfd_storage") & "\gt_" & serie.ToString & folio.ToString & "_timbrado.xml", "Fecha", "cfdi:Comprobante")
-                reporte.ReportParameters("txtFechaCertificacion").Value = GetXmlAttribute(Server.MapPath("~/portalCFD/cfd_storage") & "\gt_" & serie.ToString & folio.ToString & "_timbrado.xml", "FechaTimbrado", "tfd:TimbreFiscalDigital")
-                reporte.ReportParameters("txtUUID").Value = GetXmlAttribute(Server.MapPath("~/portalCFD/cfd_storage") & "\gt_" & serie.ToString & folio.ToString & "_timbrado.xml", "UUID", "tfd:TimbreFiscalDigital")
-                reporte.ReportParameters("txtPACCertifico").Value = GetXmlAttribute(Server.MapPath("~/portalCFD/cfd_storage") & "\gt_" & serie.ToString & folio.ToString & "_timbrado.xml", "RfcProvCertif", "tfd:TimbreFiscalDigital")
-                reporte.ReportParameters("txtSerieEmisor").Value = GetXmlAttribute(Server.MapPath("~/portalCFD/cfd_storage") & "\gt_" & serie.ToString & folio.ToString & "_timbrado.xml", "NoCertificado", "cfdi:Comprobante")
-                reporte.ReportParameters("txtSerieCertificadoSAT").Value = GetXmlAttribute(Server.MapPath("~/portalCFD/cfd_storage") & "\gt_" & serie.ToString & folio.ToString & "_timbrado.xml", "NoCertificadoSAT", "tfd:TimbreFiscalDigital")
-                reporte.ReportParameters("txtClienteRazonSocial").Value = GetXmlAttribute(Server.MapPath("~/portalCFD/cfd_storage") & "\gt_" & serie.ToString & folio.ToString & "_timbrado.xml", "Nombre", "cfdi:Receptor")
+                reporte.ReportParameters("txtFechaEmision").Value = GetXmlAttribute(Server.MapPath("~/portalCFD/cfd_storage") & "\s7_" & serie.ToString & folio.ToString & "_timbrado.xml", "Fecha", "cfdi:Comprobante")
+                reporte.ReportParameters("txtFechaCertificacion").Value = GetXmlAttribute(Server.MapPath("~/portalCFD/cfd_storage") & "\s7_" & serie.ToString & folio.ToString & "_timbrado.xml", "FechaTimbrado", "tfd:TimbreFiscalDigital")
+                reporte.ReportParameters("txtUUID").Value = GetXmlAttribute(Server.MapPath("~/portalCFD/cfd_storage") & "\s7_" & serie.ToString & folio.ToString & "_timbrado.xml", "UUID", "tfd:TimbreFiscalDigital")
+                reporte.ReportParameters("txtPACCertifico").Value = GetXmlAttribute(Server.MapPath("~/portalCFD/cfd_storage") & "\s7_" & serie.ToString & folio.ToString & "_timbrado.xml", "RfcProvCertif", "tfd:TimbreFiscalDigital")
+                reporte.ReportParameters("txtSerieEmisor").Value = GetXmlAttribute(Server.MapPath("~/portalCFD/cfd_storage") & "\s7_" & serie.ToString & folio.ToString & "_timbrado.xml", "NoCertificado", "cfdi:Comprobante")
+                reporte.ReportParameters("txtSerieCertificadoSAT").Value = GetXmlAttribute(Server.MapPath("~/portalCFD/cfd_storage") & "\s7_" & serie.ToString & folio.ToString & "_timbrado.xml", "NoCertificadoSAT", "tfd:TimbreFiscalDigital")
+                reporte.ReportParameters("txtClienteRazonSocial").Value = GetXmlAttribute(Server.MapPath("~/portalCFD/cfd_storage") & "\s7_" & serie.ToString & folio.ToString & "_timbrado.xml", "Nombre", "cfdi:Receptor")
                 reporte.ReportParameters("txtClienteCalleNum").Value = callenum
                 reporte.ReportParameters("txtClienteColonia").Value = colonia
                 reporte.ReportParameters("txtClienteCiudadEstado").Value = ciudad
-                reporte.ReportParameters("txtClienteRFC").Value = GetXmlAttribute(Server.MapPath("~/portalCFD/cfd_storage") & "\gt_" & serie.ToString & folio.ToString & "_timbrado.xml", "Rfc", "cfdi:Receptor")
-                reporte.ReportParameters("txtSelloDigitalCFDI").Value = GetXmlAttribute(Server.MapPath("~/portalCFD/cfd_storage") & "\gt_" & serie.ToString & folio.ToString & "_timbrado.xml", "Sello", "cfdi:Comprobante")
-                reporte.ReportParameters("txtSelloDigitalSAT").Value = GetXmlAttribute(Server.MapPath("~/portalCFD/cfd_storage") & "\gt_" & serie.ToString & folio.ToString & "_timbrado.xml", "SelloSAT", "tfd:TimbreFiscalDigital")
+                reporte.ReportParameters("txtClienteRFC").Value = GetXmlAttribute(Server.MapPath("~/portalCFD/cfd_storage") & "\s7_" & serie.ToString & folio.ToString & "_timbrado.xml", "Rfc", "cfdi:Receptor")
+                reporte.ReportParameters("txtSelloDigitalCFDI").Value = GetXmlAttribute(Server.MapPath("~/portalCFD/cfd_storage") & "\s7_" & serie.ToString & folio.ToString & "_timbrado.xml", "Sello", "cfdi:Comprobante")
+                reporte.ReportParameters("txtSelloDigitalSAT").Value = GetXmlAttribute(Server.MapPath("~/portalCFD/cfd_storage") & "\s7_" & serie.ToString & folio.ToString & "_timbrado.xml", "SelloSAT", "tfd:TimbreFiscalDigital")
                 reporte.ReportParameters("txtPedimento").Value = pedimento
                 reporte.ReportParameters("txtEnviarA").Value = enviara
 
@@ -2015,19 +2015,19 @@ Public Class Facturar
                 reporte.ReportParameters("txtCondicionesPago").Value = condiciones
                 reporte.ReportParameters("paramImgCBB").Value = Server.MapPath("~/portalcfd/cbb/" & serie.ToString & folio.ToString & ".png")
                 reporte.ReportParameters("paramImgBanner").Value = Server.MapPath("~/portalcfd/logos/" & Session("logo_formato"))
-                reporte.ReportParameters("txtFechaEmision").Value = GetXmlAttribute(Server.MapPath("~/portalCFD/cfd_storage") & "\gt_" & serie.ToString & folio.ToString & "_timbrado.xml", "Fecha", "cfdi:Comprobante")
-                reporte.ReportParameters("txtFechaCertificacion").Value = GetXmlAttribute(Server.MapPath("~/portalCFD/cfd_storage") & "\gt_" & serie.ToString & folio.ToString & "_timbrado.xml", "FechaTimbrado", "tfd:TimbreFiscalDigital")
-                reporte.ReportParameters("txtUUID").Value = GetXmlAttribute(Server.MapPath("~/portalCFD/cfd_storage") & "\gt_" & serie.ToString & folio.ToString & "_timbrado.xml", "UUID", "tfd:TimbreFiscalDigital")
-                reporte.ReportParameters("txtPACCertifico").Value = GetXmlAttribute(Server.MapPath("~/portalCFD/cfd_storage") & "\gt_" & serie.ToString & folio.ToString & "_timbrado.xml", "RfcProvCertif", "tfd:TimbreFiscalDigital")
-                reporte.ReportParameters("txtSerieEmisor").Value = GetXmlAttribute(Server.MapPath("~/portalCFD/cfd_storage") & "\gt_" & serie.ToString & folio.ToString & "_timbrado.xml", "NoCertificado", "cfdi:Comprobante")
-                reporte.ReportParameters("txtSerieCertificadoSAT").Value = GetXmlAttribute(Server.MapPath("~/portalCFD/cfd_storage") & "\gt_" & serie.ToString & folio.ToString & "_timbrado.xml", "NoCertificadoSAT", "tfd:TimbreFiscalDigital")
-                reporte.ReportParameters("txtClienteRazonSocial").Value = GetXmlAttribute(Server.MapPath("~/portalCFD/cfd_storage") & "\gt_" & serie.ToString & folio.ToString & "_timbrado.xml", "Nombre", "cfdi:Receptor")
+                reporte.ReportParameters("txtFechaEmision").Value = GetXmlAttribute(Server.MapPath("~/portalCFD/cfd_storage") & "\s7_" & serie.ToString & folio.ToString & "_timbrado.xml", "Fecha", "cfdi:Comprobante")
+                reporte.ReportParameters("txtFechaCertificacion").Value = GetXmlAttribute(Server.MapPath("~/portalCFD/cfd_storage") & "\s7_" & serie.ToString & folio.ToString & "_timbrado.xml", "FechaTimbrado", "tfd:TimbreFiscalDigital")
+                reporte.ReportParameters("txtUUID").Value = GetXmlAttribute(Server.MapPath("~/portalCFD/cfd_storage") & "\s7_" & serie.ToString & folio.ToString & "_timbrado.xml", "UUID", "tfd:TimbreFiscalDigital")
+                reporte.ReportParameters("txtPACCertifico").Value = GetXmlAttribute(Server.MapPath("~/portalCFD/cfd_storage") & "\s7_" & serie.ToString & folio.ToString & "_timbrado.xml", "RfcProvCertif", "tfd:TimbreFiscalDigital")
+                reporte.ReportParameters("txtSerieEmisor").Value = GetXmlAttribute(Server.MapPath("~/portalCFD/cfd_storage") & "\s7_" & serie.ToString & folio.ToString & "_timbrado.xml", "NoCertificado", "cfdi:Comprobante")
+                reporte.ReportParameters("txtSerieCertificadoSAT").Value = GetXmlAttribute(Server.MapPath("~/portalCFD/cfd_storage") & "\s7_" & serie.ToString & folio.ToString & "_timbrado.xml", "NoCertificadoSAT", "tfd:TimbreFiscalDigital")
+                reporte.ReportParameters("txtClienteRazonSocial").Value = GetXmlAttribute(Server.MapPath("~/portalCFD/cfd_storage") & "\s7_" & serie.ToString & folio.ToString & "_timbrado.xml", "Nombre", "cfdi:Receptor")
                 reporte.ReportParameters("txtClienteCalleNum").Value = callenum
                 reporte.ReportParameters("txtClienteColonia").Value = colonia
                 reporte.ReportParameters("txtClienteCiudadEstado").Value = ciudad
-                reporte.ReportParameters("txtClienteRFC").Value = GetXmlAttribute(Server.MapPath("~/portalCFD/cfd_storage") & "\gt_" & serie.ToString & folio.ToString & "_timbrado.xml", "Rfc", "cfdi:Receptor")
-                reporte.ReportParameters("txtSelloDigitalCFDI").Value = GetXmlAttribute(Server.MapPath("~/portalCFD/cfd_storage") & "\gt_" & serie.ToString & folio.ToString & "_timbrado.xml", "Sello", "cfdi:Comprobante")
-                reporte.ReportParameters("txtSelloDigitalSAT").Value = GetXmlAttribute(Server.MapPath("~/portalCFD/cfd_storage") & "\gt_" & serie.ToString & folio.ToString & "_timbrado.xml", "SelloSAT", "tfd:TimbreFiscalDigital")
+                reporte.ReportParameters("txtClienteRFC").Value = GetXmlAttribute(Server.MapPath("~/portalCFD/cfd_storage") & "\s7_" & serie.ToString & folio.ToString & "_timbrado.xml", "Rfc", "cfdi:Receptor")
+                reporte.ReportParameters("txtSelloDigitalCFDI").Value = GetXmlAttribute(Server.MapPath("~/portalCFD/cfd_storage") & "\s7_" & serie.ToString & folio.ToString & "_timbrado.xml", "Sello", "cfdi:Comprobante")
+                reporte.ReportParameters("txtSelloDigitalSAT").Value = GetXmlAttribute(Server.MapPath("~/portalCFD/cfd_storage") & "\s7_" & serie.ToString & folio.ToString & "_timbrado.xml", "SelloSAT", "tfd:TimbreFiscalDigital")
                 reporte.ReportParameters("txtInstrucciones").Value = instrucciones
                 reporte.ReportParameters("txtPedimento").Value = pedimento
                 reporte.ReportParameters("txtEnviarA").Value = enviara
@@ -2044,7 +2044,7 @@ Public Class Facturar
                 reporte.ReportParameters("txtCadenaOriginal").Value = cadOrigComp
                 reporte.ReportParameters("txtEmisorRazonSocial").Value = em_razonsocial
                 reporte.ReportParameters("txtLugarExpedicion").Value = expedicionLinea1 & vbCrLf & expedicionLinea2 & vbCrLf & expedicionLinea3
-                tipo_comprobante = GetXmlAttribute(Server.MapPath("~/portalCFD/cfd_storage") & "\gt_" & serie.ToString & folio.ToString & "_timbrado.xml", "TipoDeComprobante", "cfdi:Comprobante")
+                tipo_comprobante = GetXmlAttribute(Server.MapPath("~/portalCFD/cfd_storage") & "\s7_" & serie.ToString & folio.ToString & "_timbrado.xml", "TipoDeComprobante", "cfdi:Comprobante")
 
                 If tipo_comprobante = "I" Then
                     tipo_comprobante = "Ingreso"
