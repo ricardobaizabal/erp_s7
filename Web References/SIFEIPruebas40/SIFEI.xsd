@@ -3,8 +3,10 @@
   <xs:element name="CambiaPassword" type="tns:CambiaPassword" />
   <xs:element name="CambiaPasswordResponse" type="tns:CambiaPasswordResponse" />
   <xs:element name="IOException" type="tns:IOException" />
+  <xs:element name="InterruptedException" type="tns:InterruptedException" />
   <xs:element name="SOAPException" type="tns:SOAPException" />
   <xs:element name="SifeiException" type="tns:SifeiException" />
+  <xs:element name="UnknownHostException" type="tns:UnknownHostException" />
   <xs:element name="cancelaCFDI" type="tns:cancelaCFDI" />
   <xs:element name="cancelaCFDIResponse" type="tns:cancelaCFDIResponse" />
   <xs:element name="cancelaCFDISectorPrimario" type="tns:cancelaCFDISectorPrimario" />
@@ -63,6 +65,21 @@
       <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="UnknownHostException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="IOException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InterruptedException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="getXML">
     <xs:sequence>
       <xs:element minOccurs="0" name="rfc" type="xs:string" />
@@ -108,18 +125,6 @@
       <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="cancelaCFDISignature">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="usuarioSIFEI" type="xs:string" />
-      <xs:element minOccurs="0" name="passUser" type="xs:string" />
-      <xs:element minOccurs="0" name="archivoZIP" nillable="true" type="xs:base64Binary" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="cancelaCFDISignatureResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="getCFDI">
     <xs:sequence>
       <xs:element minOccurs="0" name="Usuario" type="xs:string" />
@@ -134,9 +139,16 @@
       <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="IOException">
+  <xs:complexType name="cancelaCFDISignature">
     <xs:sequence>
-      <xs:element minOccurs="0" name="message" type="xs:string" />
+      <xs:element minOccurs="0" name="usuarioSIFEI" type="xs:string" />
+      <xs:element minOccurs="0" name="passUser" type="xs:string" />
+      <xs:element minOccurs="0" name="archivoZIP" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cancelaCFDISignatureResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="getCFDISign">

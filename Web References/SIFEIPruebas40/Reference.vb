@@ -24,24 +24,28 @@ Imports System.Xml.Serialization
 Namespace SIFEIPruebas40
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code"),  _
      System.Web.Services.WebServiceBindingAttribute(Name:="SIFEIPortBinding", [Namespace]:="http://MApeados/")>  _
     Partial Public Class SIFEIService
         Inherits System.Web.Services.Protocols.SoapHttpClientProtocol
         
-        Private cancelaCFDISignatureOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private getXMLOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private getXMLProcesoOperationCompleted As System.Threading.SendOrPostCallback
-        
         Private getCFDIAndURLOperationCompleted As System.Threading.SendOrPostCallback
         
         Private getCFDIOperationCompleted As System.Threading.SendOrPostCallback
         
         Private getCFDISendPDFOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private cancelaCFDIOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private cancelaCFDISectorPrimarioOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private cancelaCFDISignatureOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private getXMLOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private getXMLProcesoOperationCompleted As System.Threading.SendOrPostCallback
         
         Private getCFDIProcesaOperationCompleted As System.Threading.SendOrPostCallback
         
@@ -50,10 +54,6 @@ Namespace SIFEIPruebas40
         Private setCFDIOperationCompleted As System.Threading.SendOrPostCallback
         
         Private getTimbreCFDIOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private cancelaCFDISectorPrimarioOperationCompleted As System.Threading.SendOrPostCallback
-        
-        Private cancelaCFDIOperationCompleted As System.Threading.SendOrPostCallback
         
         Private CambiaPasswordOperationCompleted As System.Threading.SendOrPostCallback
         
@@ -96,15 +96,6 @@ Namespace SIFEIPruebas40
         End Property
         
         '''<remarks/>
-        Public Event cancelaCFDISignatureCompleted As cancelaCFDISignatureCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event getXMLCompleted As getXMLCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event getXMLProcesoCompleted As getXMLProcesoCompletedEventHandler
-        
-        '''<remarks/>
         Public Event getCFDIAndURLCompleted As getCFDIAndURLCompletedEventHandler
         
         '''<remarks/>
@@ -112,6 +103,21 @@ Namespace SIFEIPruebas40
         
         '''<remarks/>
         Public Event getCFDISendPDFCompleted As getCFDISendPDFCompletedEventHandler
+        
+        '''<remarks/>
+        Public Event cancelaCFDICompleted As cancelaCFDICompletedEventHandler
+        
+        '''<remarks/>
+        Public Event cancelaCFDISectorPrimarioCompleted As cancelaCFDISectorPrimarioCompletedEventHandler
+        
+        '''<remarks/>
+        Public Event cancelaCFDISignatureCompleted As cancelaCFDISignatureCompletedEventHandler
+        
+        '''<remarks/>
+        Public Event getXMLCompleted As getXMLCompletedEventHandler
+        
+        '''<remarks/>
+        Public Event getXMLProcesoCompleted As getXMLProcesoCompletedEventHandler
         
         '''<remarks/>
         Public Event getCFDIProcesaCompleted As getCFDIProcesaCompletedEventHandler
@@ -126,94 +132,7 @@ Namespace SIFEIPruebas40
         Public Event getTimbreCFDICompleted As getTimbreCFDICompletedEventHandler
         
         '''<remarks/>
-        Public Event cancelaCFDISectorPrimarioCompleted As cancelaCFDISectorPrimarioCompletedEventHandler
-        
-        '''<remarks/>
-        Public Event cancelaCFDICompleted As cancelaCFDICompletedEventHandler
-        
-        '''<remarks/>
         Public Event CambiaPasswordCompleted As CambiaPasswordCompletedEventHandler
-        
-        '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace:="http://MApeados/", ResponseNamespace:="http://MApeados/", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function cancelaCFDISignature(<System.Xml.Serialization.XmlElementAttribute(Form:=System.Xml.Schema.XmlSchemaForm.Unqualified)> ByVal usuarioSIFEI As String, <System.Xml.Serialization.XmlElementAttribute(Form:=System.Xml.Schema.XmlSchemaForm.Unqualified)> ByVal passUser As String, <System.Xml.Serialization.XmlElementAttribute(Form:=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType:="base64Binary", IsNullable:=true)> ByVal archivoZIP() As Byte) As <System.Xml.Serialization.XmlElementAttribute("return", Form:=System.Xml.Schema.XmlSchemaForm.Unqualified)> String
-            Dim results() As Object = Me.Invoke("cancelaCFDISignature", New Object() {usuarioSIFEI, passUser, archivoZIP})
-            Return CType(results(0),String)
-        End Function
-        
-        '''<remarks/>
-        Public Overloads Sub cancelaCFDISignatureAsync(ByVal usuarioSIFEI As String, ByVal passUser As String, ByVal archivoZIP() As Byte)
-            Me.cancelaCFDISignatureAsync(usuarioSIFEI, passUser, archivoZIP, Nothing)
-        End Sub
-        
-        '''<remarks/>
-        Public Overloads Sub cancelaCFDISignatureAsync(ByVal usuarioSIFEI As String, ByVal passUser As String, ByVal archivoZIP() As Byte, ByVal userState As Object)
-            If (Me.cancelaCFDISignatureOperationCompleted Is Nothing) Then
-                Me.cancelaCFDISignatureOperationCompleted = AddressOf Me.OncancelaCFDISignatureOperationCompleted
-            End If
-            Me.InvokeAsync("cancelaCFDISignature", New Object() {usuarioSIFEI, passUser, archivoZIP}, Me.cancelaCFDISignatureOperationCompleted, userState)
-        End Sub
-        
-        Private Sub OncancelaCFDISignatureOperationCompleted(ByVal arg As Object)
-            If (Not (Me.cancelaCFDISignatureCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent cancelaCFDISignatureCompleted(Me, New cancelaCFDISignatureCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
-        '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace:="http://MApeados/", ResponseNamespace:="http://MApeados/", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function getXML(<System.Xml.Serialization.XmlElementAttribute(Form:=System.Xml.Schema.XmlSchemaForm.Unqualified)> ByVal rfc As String, <System.Xml.Serialization.XmlElementAttribute(Form:=System.Xml.Schema.XmlSchemaForm.Unqualified)> ByVal pass As String, <System.Xml.Serialization.XmlElementAttribute(Form:=System.Xml.Schema.XmlSchemaForm.Unqualified)> ByVal hash As String) As <System.Xml.Serialization.XmlElementAttribute("return", Form:=System.Xml.Schema.XmlSchemaForm.Unqualified)> String
-            Dim results() As Object = Me.Invoke("getXML", New Object() {rfc, pass, hash})
-            Return CType(results(0),String)
-        End Function
-        
-        '''<remarks/>
-        Public Overloads Sub getXMLAsync(ByVal rfc As String, ByVal pass As String, ByVal hash As String)
-            Me.getXMLAsync(rfc, pass, hash, Nothing)
-        End Sub
-        
-        '''<remarks/>
-        Public Overloads Sub getXMLAsync(ByVal rfc As String, ByVal pass As String, ByVal hash As String, ByVal userState As Object)
-            If (Me.getXMLOperationCompleted Is Nothing) Then
-                Me.getXMLOperationCompleted = AddressOf Me.OngetXMLOperationCompleted
-            End If
-            Me.InvokeAsync("getXML", New Object() {rfc, pass, hash}, Me.getXMLOperationCompleted, userState)
-        End Sub
-        
-        Private Sub OngetXMLOperationCompleted(ByVal arg As Object)
-            If (Not (Me.getXMLCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent getXMLCompleted(Me, New getXMLCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
-        '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace:="http://MApeados/", ResponseNamespace:="http://MApeados/", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function getXMLProceso(<System.Xml.Serialization.XmlElementAttribute(Form:=System.Xml.Schema.XmlSchemaForm.Unqualified)> ByVal rfc As String, <System.Xml.Serialization.XmlElementAttribute(Form:=System.Xml.Schema.XmlSchemaForm.Unqualified)> ByVal pass As String, <System.Xml.Serialization.XmlElementAttribute(Form:=System.Xml.Schema.XmlSchemaForm.Unqualified)> ByVal idseguimiento As Long) As <System.Xml.Serialization.XmlElementAttribute("return", Form:=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable:=true)> String()
-            Dim results() As Object = Me.Invoke("getXMLProceso", New Object() {rfc, pass, idseguimiento})
-            Return CType(results(0),String())
-        End Function
-        
-        '''<remarks/>
-        Public Overloads Sub getXMLProcesoAsync(ByVal rfc As String, ByVal pass As String, ByVal idseguimiento As Long)
-            Me.getXMLProcesoAsync(rfc, pass, idseguimiento, Nothing)
-        End Sub
-        
-        '''<remarks/>
-        Public Overloads Sub getXMLProcesoAsync(ByVal rfc As String, ByVal pass As String, ByVal idseguimiento As Long, ByVal userState As Object)
-            If (Me.getXMLProcesoOperationCompleted Is Nothing) Then
-                Me.getXMLProcesoOperationCompleted = AddressOf Me.OngetXMLProcesoOperationCompleted
-            End If
-            Me.InvokeAsync("getXMLProceso", New Object() {rfc, pass, idseguimiento}, Me.getXMLProcesoOperationCompleted, userState)
-        End Sub
-        
-        Private Sub OngetXMLProcesoOperationCompleted(ByVal arg As Object)
-            If (Not (Me.getXMLProcesoCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent getXMLProcesoCompleted(Me, New getXMLProcesoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
         
         '''<remarks/>
         <System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace:="http://MApeados/", ResponseNamespace:="http://MApeados/", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
@@ -293,6 +212,141 @@ Namespace SIFEIPruebas40
             If (Not (Me.getCFDISendPDFCompletedEvent) Is Nothing) Then
                 Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
                 RaiseEvent getCFDISendPDFCompleted(Me, New getCFDISendPDFCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace:="http://MApeados/", ResponseNamespace:="http://MApeados/", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function cancelaCFDI(<System.Xml.Serialization.XmlElementAttribute(Form:=System.Xml.Schema.XmlSchemaForm.Unqualified)> ByVal usuarioSIFEI As String, <System.Xml.Serialization.XmlElementAttribute(Form:=System.Xml.Schema.XmlSchemaForm.Unqualified)> ByVal passUser As String, <System.Xml.Serialization.XmlElementAttribute(Form:=System.Xml.Schema.XmlSchemaForm.Unqualified)> ByVal rfc As String, <System.Xml.Serialization.XmlElementAttribute(Form:=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType:="base64Binary", IsNullable:=true)> ByVal pfx() As Byte, <System.Xml.Serialization.XmlElementAttribute(Form:=System.Xml.Schema.XmlSchemaForm.Unqualified)> ByVal passPFX As String, <System.Xml.Serialization.XmlElementAttribute("UUIDS", Form:=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable:=true)> ByVal UUIDS() As String) As <System.Xml.Serialization.XmlElementAttribute("return", Form:=System.Xml.Schema.XmlSchemaForm.Unqualified)> String
+            Dim results() As Object = Me.Invoke("cancelaCFDI", New Object() {usuarioSIFEI, passUser, rfc, pfx, passPFX, UUIDS})
+            Return CType(results(0),String)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub cancelaCFDIAsync(ByVal usuarioSIFEI As String, ByVal passUser As String, ByVal rfc As String, ByVal pfx() As Byte, ByVal passPFX As String, ByVal UUIDS() As String)
+            Me.cancelaCFDIAsync(usuarioSIFEI, passUser, rfc, pfx, passPFX, UUIDS, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub cancelaCFDIAsync(ByVal usuarioSIFEI As String, ByVal passUser As String, ByVal rfc As String, ByVal pfx() As Byte, ByVal passPFX As String, ByVal UUIDS() As String, ByVal userState As Object)
+            If (Me.cancelaCFDIOperationCompleted Is Nothing) Then
+                Me.cancelaCFDIOperationCompleted = AddressOf Me.OncancelaCFDIOperationCompleted
+            End If
+            Me.InvokeAsync("cancelaCFDI", New Object() {usuarioSIFEI, passUser, rfc, pfx, passPFX, UUIDS}, Me.cancelaCFDIOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OncancelaCFDIOperationCompleted(ByVal arg As Object)
+            If (Not (Me.cancelaCFDICompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent cancelaCFDICompleted(Me, New cancelaCFDICompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace:="http://MApeados/", ResponseNamespace:="http://MApeados/", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function cancelaCFDISectorPrimario(<System.Xml.Serialization.XmlElementAttribute(Form:=System.Xml.Schema.XmlSchemaForm.Unqualified)> ByVal usuarioSIFEI As String, <System.Xml.Serialization.XmlElementAttribute(Form:=System.Xml.Schema.XmlSchemaForm.Unqualified)> ByVal passUser As String, <System.Xml.Serialization.XmlElementAttribute(Form:=System.Xml.Schema.XmlSchemaForm.Unqualified)> ByVal rfc As String, <System.Xml.Serialization.XmlElementAttribute("UUIDS", Form:=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable:=true)> ByVal UUIDS() As String) As <System.Xml.Serialization.XmlElementAttribute("return", Form:=System.Xml.Schema.XmlSchemaForm.Unqualified)> String
+            Dim results() As Object = Me.Invoke("cancelaCFDISectorPrimario", New Object() {usuarioSIFEI, passUser, rfc, UUIDS})
+            Return CType(results(0),String)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub cancelaCFDISectorPrimarioAsync(ByVal usuarioSIFEI As String, ByVal passUser As String, ByVal rfc As String, ByVal UUIDS() As String)
+            Me.cancelaCFDISectorPrimarioAsync(usuarioSIFEI, passUser, rfc, UUIDS, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub cancelaCFDISectorPrimarioAsync(ByVal usuarioSIFEI As String, ByVal passUser As String, ByVal rfc As String, ByVal UUIDS() As String, ByVal userState As Object)
+            If (Me.cancelaCFDISectorPrimarioOperationCompleted Is Nothing) Then
+                Me.cancelaCFDISectorPrimarioOperationCompleted = AddressOf Me.OncancelaCFDISectorPrimarioOperationCompleted
+            End If
+            Me.InvokeAsync("cancelaCFDISectorPrimario", New Object() {usuarioSIFEI, passUser, rfc, UUIDS}, Me.cancelaCFDISectorPrimarioOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OncancelaCFDISectorPrimarioOperationCompleted(ByVal arg As Object)
+            If (Not (Me.cancelaCFDISectorPrimarioCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent cancelaCFDISectorPrimarioCompleted(Me, New cancelaCFDISectorPrimarioCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace:="http://MApeados/", ResponseNamespace:="http://MApeados/", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function cancelaCFDISignature(<System.Xml.Serialization.XmlElementAttribute(Form:=System.Xml.Schema.XmlSchemaForm.Unqualified)> ByVal usuarioSIFEI As String, <System.Xml.Serialization.XmlElementAttribute(Form:=System.Xml.Schema.XmlSchemaForm.Unqualified)> ByVal passUser As String, <System.Xml.Serialization.XmlElementAttribute(Form:=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType:="base64Binary", IsNullable:=true)> ByVal archivoZIP() As Byte) As <System.Xml.Serialization.XmlElementAttribute("return", Form:=System.Xml.Schema.XmlSchemaForm.Unqualified)> String
+            Dim results() As Object = Me.Invoke("cancelaCFDISignature", New Object() {usuarioSIFEI, passUser, archivoZIP})
+            Return CType(results(0),String)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub cancelaCFDISignatureAsync(ByVal usuarioSIFEI As String, ByVal passUser As String, ByVal archivoZIP() As Byte)
+            Me.cancelaCFDISignatureAsync(usuarioSIFEI, passUser, archivoZIP, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub cancelaCFDISignatureAsync(ByVal usuarioSIFEI As String, ByVal passUser As String, ByVal archivoZIP() As Byte, ByVal userState As Object)
+            If (Me.cancelaCFDISignatureOperationCompleted Is Nothing) Then
+                Me.cancelaCFDISignatureOperationCompleted = AddressOf Me.OncancelaCFDISignatureOperationCompleted
+            End If
+            Me.InvokeAsync("cancelaCFDISignature", New Object() {usuarioSIFEI, passUser, archivoZIP}, Me.cancelaCFDISignatureOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OncancelaCFDISignatureOperationCompleted(ByVal arg As Object)
+            If (Not (Me.cancelaCFDISignatureCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent cancelaCFDISignatureCompleted(Me, New cancelaCFDISignatureCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace:="http://MApeados/", ResponseNamespace:="http://MApeados/", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function getXML(<System.Xml.Serialization.XmlElementAttribute(Form:=System.Xml.Schema.XmlSchemaForm.Unqualified)> ByVal rfc As String, <System.Xml.Serialization.XmlElementAttribute(Form:=System.Xml.Schema.XmlSchemaForm.Unqualified)> ByVal pass As String, <System.Xml.Serialization.XmlElementAttribute(Form:=System.Xml.Schema.XmlSchemaForm.Unqualified)> ByVal hash As String) As <System.Xml.Serialization.XmlElementAttribute("return", Form:=System.Xml.Schema.XmlSchemaForm.Unqualified)> String
+            Dim results() As Object = Me.Invoke("getXML", New Object() {rfc, pass, hash})
+            Return CType(results(0),String)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub getXMLAsync(ByVal rfc As String, ByVal pass As String, ByVal hash As String)
+            Me.getXMLAsync(rfc, pass, hash, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub getXMLAsync(ByVal rfc As String, ByVal pass As String, ByVal hash As String, ByVal userState As Object)
+            If (Me.getXMLOperationCompleted Is Nothing) Then
+                Me.getXMLOperationCompleted = AddressOf Me.OngetXMLOperationCompleted
+            End If
+            Me.InvokeAsync("getXML", New Object() {rfc, pass, hash}, Me.getXMLOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OngetXMLOperationCompleted(ByVal arg As Object)
+            If (Not (Me.getXMLCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent getXMLCompleted(Me, New getXMLCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace:="http://MApeados/", ResponseNamespace:="http://MApeados/", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function getXMLProceso(<System.Xml.Serialization.XmlElementAttribute(Form:=System.Xml.Schema.XmlSchemaForm.Unqualified)> ByVal rfc As String, <System.Xml.Serialization.XmlElementAttribute(Form:=System.Xml.Schema.XmlSchemaForm.Unqualified)> ByVal pass As String, <System.Xml.Serialization.XmlElementAttribute(Form:=System.Xml.Schema.XmlSchemaForm.Unqualified)> ByVal idseguimiento As Long) As <System.Xml.Serialization.XmlElementAttribute("return", Form:=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable:=true)> String()
+            Dim results() As Object = Me.Invoke("getXMLProceso", New Object() {rfc, pass, idseguimiento})
+            Return CType(results(0),String())
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub getXMLProcesoAsync(ByVal rfc As String, ByVal pass As String, ByVal idseguimiento As Long)
+            Me.getXMLProcesoAsync(rfc, pass, idseguimiento, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub getXMLProcesoAsync(ByVal rfc As String, ByVal pass As String, ByVal idseguimiento As Long, ByVal userState As Object)
+            If (Me.getXMLProcesoOperationCompleted Is Nothing) Then
+                Me.getXMLProcesoOperationCompleted = AddressOf Me.OngetXMLProcesoOperationCompleted
+            End If
+            Me.InvokeAsync("getXMLProceso", New Object() {rfc, pass, idseguimiento}, Me.getXMLProcesoOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OngetXMLProcesoOperationCompleted(ByVal arg As Object)
+            If (Not (Me.getXMLProcesoCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent getXMLProcesoCompleted(Me, New getXMLProcesoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
             End If
         End Sub
         
@@ -406,60 +460,6 @@ Namespace SIFEIPruebas40
         
         '''<remarks/>
         <System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace:="http://MApeados/", ResponseNamespace:="http://MApeados/", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function cancelaCFDISectorPrimario(<System.Xml.Serialization.XmlElementAttribute(Form:=System.Xml.Schema.XmlSchemaForm.Unqualified)> ByVal usuarioSIFEI As String, <System.Xml.Serialization.XmlElementAttribute(Form:=System.Xml.Schema.XmlSchemaForm.Unqualified)> ByVal passUser As String, <System.Xml.Serialization.XmlElementAttribute(Form:=System.Xml.Schema.XmlSchemaForm.Unqualified)> ByVal rfc As String, <System.Xml.Serialization.XmlElementAttribute("UUIDS", Form:=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable:=true)> ByVal UUIDS() As String) As <System.Xml.Serialization.XmlElementAttribute("return", Form:=System.Xml.Schema.XmlSchemaForm.Unqualified)> String
-            Dim results() As Object = Me.Invoke("cancelaCFDISectorPrimario", New Object() {usuarioSIFEI, passUser, rfc, UUIDS})
-            Return CType(results(0),String)
-        End Function
-        
-        '''<remarks/>
-        Public Overloads Sub cancelaCFDISectorPrimarioAsync(ByVal usuarioSIFEI As String, ByVal passUser As String, ByVal rfc As String, ByVal UUIDS() As String)
-            Me.cancelaCFDISectorPrimarioAsync(usuarioSIFEI, passUser, rfc, UUIDS, Nothing)
-        End Sub
-        
-        '''<remarks/>
-        Public Overloads Sub cancelaCFDISectorPrimarioAsync(ByVal usuarioSIFEI As String, ByVal passUser As String, ByVal rfc As String, ByVal UUIDS() As String, ByVal userState As Object)
-            If (Me.cancelaCFDISectorPrimarioOperationCompleted Is Nothing) Then
-                Me.cancelaCFDISectorPrimarioOperationCompleted = AddressOf Me.OncancelaCFDISectorPrimarioOperationCompleted
-            End If
-            Me.InvokeAsync("cancelaCFDISectorPrimario", New Object() {usuarioSIFEI, passUser, rfc, UUIDS}, Me.cancelaCFDISectorPrimarioOperationCompleted, userState)
-        End Sub
-        
-        Private Sub OncancelaCFDISectorPrimarioOperationCompleted(ByVal arg As Object)
-            If (Not (Me.cancelaCFDISectorPrimarioCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent cancelaCFDISectorPrimarioCompleted(Me, New cancelaCFDISectorPrimarioCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
-        '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace:="http://MApeados/", ResponseNamespace:="http://MApeados/", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function cancelaCFDI(<System.Xml.Serialization.XmlElementAttribute(Form:=System.Xml.Schema.XmlSchemaForm.Unqualified)> ByVal usuarioSIFEI As String, <System.Xml.Serialization.XmlElementAttribute(Form:=System.Xml.Schema.XmlSchemaForm.Unqualified)> ByVal passUser As String, <System.Xml.Serialization.XmlElementAttribute(Form:=System.Xml.Schema.XmlSchemaForm.Unqualified)> ByVal rfc As String, <System.Xml.Serialization.XmlElementAttribute(Form:=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType:="base64Binary", IsNullable:=true)> ByVal pfx() As Byte, <System.Xml.Serialization.XmlElementAttribute(Form:=System.Xml.Schema.XmlSchemaForm.Unqualified)> ByVal passPFX As String, <System.Xml.Serialization.XmlElementAttribute("UUIDS", Form:=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable:=true)> ByVal UUIDS() As String) As <System.Xml.Serialization.XmlElementAttribute("return", Form:=System.Xml.Schema.XmlSchemaForm.Unqualified)> String
-            Dim results() As Object = Me.Invoke("cancelaCFDI", New Object() {usuarioSIFEI, passUser, rfc, pfx, passPFX, UUIDS})
-            Return CType(results(0),String)
-        End Function
-        
-        '''<remarks/>
-        Public Overloads Sub cancelaCFDIAsync(ByVal usuarioSIFEI As String, ByVal passUser As String, ByVal rfc As String, ByVal pfx() As Byte, ByVal passPFX As String, ByVal UUIDS() As String)
-            Me.cancelaCFDIAsync(usuarioSIFEI, passUser, rfc, pfx, passPFX, UUIDS, Nothing)
-        End Sub
-        
-        '''<remarks/>
-        Public Overloads Sub cancelaCFDIAsync(ByVal usuarioSIFEI As String, ByVal passUser As String, ByVal rfc As String, ByVal pfx() As Byte, ByVal passPFX As String, ByVal UUIDS() As String, ByVal userState As Object)
-            If (Me.cancelaCFDIOperationCompleted Is Nothing) Then
-                Me.cancelaCFDIOperationCompleted = AddressOf Me.OncancelaCFDIOperationCompleted
-            End If
-            Me.InvokeAsync("cancelaCFDI", New Object() {usuarioSIFEI, passUser, rfc, pfx, passPFX, UUIDS}, Me.cancelaCFDIOperationCompleted, userState)
-        End Sub
-        
-        Private Sub OncancelaCFDIOperationCompleted(ByVal arg As Object)
-            If (Not (Me.cancelaCFDICompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent cancelaCFDICompleted(Me, New cancelaCFDICompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
-        
-        '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace:="http://MApeados/", ResponseNamespace:="http://MApeados/", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
         Public Function CambiaPassword(<System.Xml.Serialization.XmlElementAttribute(Form:=System.Xml.Schema.XmlSchemaForm.Unqualified)> ByVal Usuario As String, <System.Xml.Serialization.XmlElementAttribute(Form:=System.Xml.Schema.XmlSchemaForm.Unqualified)> ByVal Password As String, <System.Xml.Serialization.XmlElementAttribute(Form:=System.Xml.Schema.XmlSchemaForm.Unqualified)> ByVal NewPassword As String) As <System.Xml.Serialization.XmlElementAttribute("return", Form:=System.Xml.Schema.XmlSchemaForm.Unqualified)> Boolean
             Dim results() As Object = Me.Invoke("CambiaPassword", New Object() {Usuario, Password, NewPassword})
             Return CType(results(0),Boolean)
@@ -505,92 +505,11 @@ Namespace SIFEIPruebas40
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")>  _
-    Public Delegate Sub cancelaCFDISignatureCompletedEventHandler(ByVal sender As Object, ByVal e As cancelaCFDISignatureCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class cancelaCFDISignatureCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As String
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),String)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")>  _
-    Public Delegate Sub getXMLCompletedEventHandler(ByVal sender As Object, ByVal e As getXMLCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class getXMLCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As String
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),String)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")>  _
-    Public Delegate Sub getXMLProcesoCompletedEventHandler(ByVal sender As Object, ByVal e As getXMLProcesoCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class getXMLProcesoCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As String()
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),String())
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0")>  _
     Public Delegate Sub getCFDIAndURLCompletedEventHandler(ByVal sender As Object, ByVal e As getCFDIAndURLCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class getCFDIAndURLCompletedEventArgs
@@ -613,11 +532,11 @@ Namespace SIFEIPruebas40
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0")>  _
     Public Delegate Sub getCFDICompletedEventHandler(ByVal sender As Object, ByVal e As getCFDICompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class getCFDICompletedEventArgs
@@ -640,11 +559,11 @@ Namespace SIFEIPruebas40
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0")>  _
     Public Delegate Sub getCFDISendPDFCompletedEventHandler(ByVal sender As Object, ByVal e As getCFDISendPDFCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class getCFDISendPDFCompletedEventArgs
@@ -667,146 +586,11 @@ Namespace SIFEIPruebas40
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")>  _
-    Public Delegate Sub getCFDIProcesaCompletedEventHandler(ByVal sender As Object, ByVal e As getCFDIProcesaCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class getCFDIProcesaCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As String()
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),String())
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")>  _
-    Public Delegate Sub getCFDISignCompletedEventHandler(ByVal sender As Object, ByVal e As getCFDISignCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class getCFDISignCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As Byte()
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),Byte())
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")>  _
-    Public Delegate Sub setCFDICompletedEventHandler(ByVal sender As Object, ByVal e As setCFDICompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class setCFDICompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As Byte()
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),Byte())
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")>  _
-    Public Delegate Sub getTimbreCFDICompletedEventHandler(ByVal sender As Object, ByVal e As getTimbreCFDICompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class getTimbreCFDICompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As Byte()
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),Byte())
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")>  _
-    Public Delegate Sub cancelaCFDISectorPrimarioCompletedEventHandler(ByVal sender As Object, ByVal e As cancelaCFDISectorPrimarioCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class cancelaCFDISectorPrimarioCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As String
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),String)
-            End Get
-        End Property
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0")>  _
     Public Delegate Sub cancelaCFDICompletedEventHandler(ByVal sender As Object, ByVal e As cancelaCFDICompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class cancelaCFDICompletedEventArgs
@@ -829,11 +613,227 @@ Namespace SIFEIPruebas40
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0")>  _
+    Public Delegate Sub cancelaCFDISectorPrimarioCompletedEventHandler(ByVal sender As Object, ByVal e As cancelaCFDISectorPrimarioCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class cancelaCFDISectorPrimarioCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As String
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),String)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0")>  _
+    Public Delegate Sub cancelaCFDISignatureCompletedEventHandler(ByVal sender As Object, ByVal e As cancelaCFDISignatureCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class cancelaCFDISignatureCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As String
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),String)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0")>  _
+    Public Delegate Sub getXMLCompletedEventHandler(ByVal sender As Object, ByVal e As getXMLCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class getXMLCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As String
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),String)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0")>  _
+    Public Delegate Sub getXMLProcesoCompletedEventHandler(ByVal sender As Object, ByVal e As getXMLProcesoCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class getXMLProcesoCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As String()
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),String())
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0")>  _
+    Public Delegate Sub getCFDIProcesaCompletedEventHandler(ByVal sender As Object, ByVal e As getCFDIProcesaCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class getCFDIProcesaCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As String()
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),String())
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0")>  _
+    Public Delegate Sub getCFDISignCompletedEventHandler(ByVal sender As Object, ByVal e As getCFDISignCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class getCFDISignCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As Byte()
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),Byte())
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0")>  _
+    Public Delegate Sub setCFDICompletedEventHandler(ByVal sender As Object, ByVal e As setCFDICompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class setCFDICompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As Byte()
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),Byte())
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0")>  _
+    Public Delegate Sub getTimbreCFDICompletedEventHandler(ByVal sender As Object, ByVal e As getTimbreCFDICompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class getTimbreCFDICompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As Byte()
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),Byte())
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0")>  _
     Public Delegate Sub CambiaPasswordCompletedEventHandler(ByVal sender As Object, ByVal e As CambiaPasswordCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class CambiaPasswordCompletedEventArgs
