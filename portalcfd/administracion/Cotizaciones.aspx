@@ -247,7 +247,7 @@
                                                 <ItemStyle Width="10%" />
                                                 <HeaderTemplate>Precio unitario</HeaderTemplate>
                                                 <ItemTemplate>
-                                                    <telerik:RadNumericTextBox ID="lblPrecioUnitario" ReadOnly="true" runat="server" Text='<%#Eval("unitario") %>' MinValue="0" Value="0"
+                                                    <telerik:RadNumericTextBox ID="lblPrecioUnitario" runat="server" Text='<%#Eval("unitario") %>' MinValue="0" Value="0"
                                                         Skin="Default" Width="80px" Style="margin-top: 2em; margin-bottom: .6em;">
                                                         <NumberFormat DecimalDigits="2" GroupSeparator="," />
                                                     </telerik:RadNumericTextBox>
