@@ -81,30 +81,9 @@ Public Class Cotizaciones
             End Try
 
             'Dim productoidtbl = row.DataItem("productoid")
-            If productoId = 191 Then
-                If dblCantidad > 0 Then
-                    ObjData.RunSQLQuery("exec pCotizacionDetalle @cmd=1, @cotizacionid=" & RegistroID.Value & ", @productoid=" & productoId.ToString & ", @codigo='" & strCodigo & "', @descripcion = '" & strDescripcion & "', @cantidad=" & dblCantidad & ", @unidad='" & strunidad & "', @precio='" & dlPrecio & "', @tiempoEstimado='" & txtTiempoEntrega.Text & "'")
-                End If
 
-            ElseIf productoId = 580 Then
-                If dblCantidad > 0 Then
-                    ObjData.RunSQLQuery("exec pCotizacionDetalle @cmd=1, @cotizacionid=" & RegistroID.Value & ", @productoid=" & productoId.ToString & ", @codigo='" & strCodigo & "', @descripcion = '" & txtDescripcion & "', @cantidad=" & dblCantidad & ", @unidad='" & strunidad & "', @precio='" & dlPrecio & "', @tiempoEstimado='" & txtTiempoEntrega.Text & "'")
-                End If
-
-
-            ElseIf productoId = 91147 Then
-                If dblCantidad > 0 Then
-                    ObjData.RunSQLQuery("exec pCotizacionDetalle @cmd=1, @cotizacionid=" & RegistroID.Value & ", @productoid=" & productoId.ToString & ", @codigo='" & strCodigo & "', @descripcion = '" & txtDescripcion & "', @cantidad=" & dblCantidad & ", @unidad='" & strunidad & "', @precio='" & dlPrecio & "', @tiempoEstimado='" & txtTiempoEntrega.Text & "'")
-                End If
-
-            ElseIf productoId = 631 Then
-                If dblCantidad > 0 Then
-                    ObjData.RunSQLQuery("exec pCotizacionDetalle @cmd=1, @cotizacionid=" & RegistroID.Value & ", @productoid=" & productoId.ToString & ", @codigo='" & strCodigo & "', @descripcion = '" & txtDescripcion & "', @cantidad=" & dblCantidad & ", @unidad='" & strunidad & "', @precio='" & dlPrecio & "', @tiempoEstimado='" & txtTiempoEntrega.Text & "'")
-                End If
-            Else
-                If dblCantidad > 0 Then
-                    ObjData.RunSQLQuery("exec pCotizacionDetalle @cmd=1, @cotizacionid=" & RegistroID.Value & ", @productoid=" & productoId.ToString & ", @codigo='" & strCodigo & "', @descripcion = '" & strDescripcion & "', @cantidad=" & dblCantidad & ", @unidad='" & strunidad & "', @precio='" & DlPreciolbl & "', @tiempoEstimado='" & txtTiempoEntrega.Text & "'")
-                End If
+            If dblCantidad > 0 Then
+                ObjData.RunSQLQuery("exec pCotizacionDetalle @cmd=1, @cotizacionid=" & RegistroID.Value & ", @productoid=" & productoId.ToString & ", @codigo='" & strCodigo & "', @descripcion = '" & descrip.Text & "', @cantidad=" & dblCantidad & ", @unidad='" & strunidad & "', @precio='" & DlPreciolbl & "', @tiempoEstimado='" & txtTiempoEntrega.Text & "'")
             End If
 
             'If dblCantidad > 0 Then
@@ -118,6 +97,7 @@ Public Class Cotizaciones
         'Call MuestraProductos()
         panel1.Visible = False
         btnAgregaConceptos.Visible = False
+        txtSearch.Text = ""
         lblMensaje.Text = mensaje
         '
     End Sub
